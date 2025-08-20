@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const showAnswerBtn = document.getElementById('show-answer-btn');
     const difficultyButtons = document.getElementById('difficulty-buttons');
     const difficultyBtns = document.querySelectorAll('.difficulty-btn');
-    const deckSelector = document.getElementById('deck-selector');
+    const deckInput = document.getElementById('deck-input');
+    const deckList = document.getElementById('deck-options');
     const toggleFormBtn = document.getElementById('toggle-form-btn');
     const addCardForm = document.getElementById('add-card-form');
     const editCardBtn = document.getElementById('edit-card-btn');
@@ -20,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // App Data
     let allCards = [];
     let currentCard = null;
-    let currentDeck = 'all';
+    let currentDeck = '';
 
     // API Functions
     async function loadCards() {
@@ -43,40 +44,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(allCards),
             });
-        } catch (error) { console.error("Erreur de sauvegarde générale:", error); }
+        } catch (error) { console.error("Erreur de sauvegarde:", error); }
     }
 
     // App Logic
     function populateDecks() {
-        const selectedDeck = deckSelector.value;
-        deckSelector.innerHTML = '<option value="all">Tous les paquets</option>';
-        const deckPaths = new Set();
-        allCards.forEach(card => {
-            if (card.deck) {
-                const parts = card.deck.split('::');
-                let currentPath = '';
-                for (const part of parts) {
-                    currentPath = currentPath ? `${currentPath}::${part}` : part;
-                    deckPaths.add(currentPath);
-                }
-            }
+        deckList.innerHTML = '';
+        const deckNames = new Set(allCards.map(card => card.deck).filter(Boolean));
+        const sortedDecks = Array.from(deckNames).sort((a, b) => {
+            const numA = parseInt(a.split(':')[0], 10);
+            const numB = parseInt(b.split(':')[0], 10);
+            return numA - numB;
         });
-        const sortedDecks = Array.from(deckPaths).sort();
         sortedDecks.forEach(deck => {
-            const indent = '· '.repeat(deck.split('::').length - 1);
             const option = document.createElement('option');
             option.value = deck;
-            option.textContent = indent + deck.split('::').pop();
-            deckSelector.appendChild(option);
+            deckList.appendChild(option);
         });
-        deckSelector.value = selectedDeck;
     }
 
     function showNextCard() {
         const now = new Date();
         let cardsInScope = allCards;
-        if (currentDeck !== 'all') {
-            cardsInScope = allCards.filter(card => card.deck && card.deck.startsWith(currentDeck));
+        const validDecks = Array.from(deckList.options).map(opt => opt.value);
+        if (currentDeck && validDecks.includes(currentDeck)) {
+            cardsInScope = allCards.filter(card => card.deck === currentDeck);
         }
         const dueCards = cardsInScope.filter(card => new Date(card.nextReview) <= now);
         if (dueCards.length > 0) {
@@ -92,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             difficultyButtons.classList.add('hidden');
         } else {
             currentCard = null;
-            rectoText.textContent = "🎉 Bravo ! Aucune carte à réviser dans ce paquet.";
+            rectoText.textContent = "🎉 Bravo ! Aucune carte à réviser.";
             versoText.textContent = "";
             rectoImage.style.display = 'none';
             versoImage.style.display = 'none';
@@ -117,88 +109,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Event Listeners
-    showAnswerBtn.addEventListener('click', () => {
-        cardContainer.classList.add('is-flipped');
-        showAnswerBtn.classList.add('hidden');
-        difficultyButtons.classList.remove('hidden');
-    });
-
-    difficultyBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const quality = parseInt(e.target.dataset.quality, 10);
-            updateCard(quality);
-            showNextCard();
-        });
-    });
-
-    deckSelector.addEventListener('change', (e) => {
+    deckInput.addEventListener('input', (e) => {
         currentDeck = e.target.value;
         showNextCard();
     });
-
+    
+    showAnswerBtn.addEventListener('click', () => { cardContainer.classList.add('is-flipped'); showAnswerBtn.classList.add('hidden'); difficultyButtons.classList.remove('hidden'); });
+    difficultyBtns.forEach(btn => { btn.addEventListener('click', (e) => { const quality = parseInt(e.target.dataset.quality, 10); updateCard(quality); showNextCard(); }); });
     toggleFormBtn.addEventListener('click', () => { addCardForm.classList.toggle('hidden'); });
-
-    addCardForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const newCard = {
-            id: Date.now(), deck: document.getElementById('new-deck').value.trim(), recto: document.getElementById('new-recto').value.trim(), verso: document.getElementById('new-verso').value.trim(), rectoImage: null, versoImage: null, interval: 1, easeFactor: 2.5, nextReview: new Date().toISOString()
-        };
-        allCards.push(newCard);
-        saveAllCards();
-        populateDecks();
-        addCardForm.reset();
-        addCardForm.classList.add('hidden');
-        alert('Carte ajoutée avec succès !');
-        showNextCard();
-    });
-
-    function openEditModal() {
-        if (!currentCard) return;
-        document.getElementById('edit-deck').value = currentCard.deck;
-        document.getElementById('edit-recto').value = currentCard.recto;
-        document.getElementById('edit-verso').value = currentCard.verso;
-        editModal.classList.remove('hidden');
-    }
-
+    addCardForm.addEventListener('submit', (e) => { e.preventDefault(); const newCard = { id: Date.now(), deck: document.getElementById('new-deck').value.trim(), recto: document.getElementById('new-recto').value.trim(), verso: document.getElementById('new-verso').value.trim(), rectoImage: null, versoImage: null, interval: 1, easeFactor: 2.5, nextReview: new Date().toISOString() }; allCards.push(newCard); saveAllCards(); populateDecks(); addCardForm.reset(); addCardForm.classList.add('hidden'); alert('Carte ajoutée !'); showNextCard(); });
+    function openEditModal() { if (!currentCard) return; document.getElementById('edit-deck').value = currentCard.deck; document.getElementById('edit-recto').value = currentCard.recto; document.getElementById('edit-verso').value = currentCard.verso; editModal.classList.remove('hidden'); }
     function closeEditModal() { editModal.classList.add('hidden'); }
-
     editCardBtn.addEventListener('click', openEditModal);
     cancelEditBtn.addEventListener('click', closeEditModal);
-
-    editCardForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        if (!currentCard) return;
-        const updatedData = { deck: document.getElementById('edit-deck').value, recto: document.getElementById('edit-recto').value, verso: document.getElementById('edit-verso').value, };
-        try {
-            const response = await fetch(`/api/cards/${currentCard.id}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(updatedData), });
-            const updatedCardFromServer = await response.json();
-            const cardIndex = allCards.findIndex(c => c.id === currentCard.id);
-            if (cardIndex > -1) { allCards[cardIndex] = updatedCardFromServer; }
-            currentCard = updatedCardFromServer;
-            rectoText.textContent = currentCard.recto;
-            versoText.textContent = currentCard.verso;
-            closeEditModal();
-            populateDecks();
-        } catch (error) {
-            console.error("Erreur de modification:", error);
-            alert("La modification a échoué.");
-        }
-    });
-
-    deleteCardBtn.addEventListener('click', async () => {
-        if (!currentCard) return;
-        if (confirm("Êtes-vous sûr de vouloir supprimer cette carte ?")) {
-            try {
-                await fetch(`/api/cards/${currentCard.id}`, { method: 'DELETE' });
-                allCards = allCards.filter(c => c.id !== currentCard.id);
-                populateDecks();
-                showNextCard();
-            } catch (error) {
-                console.error("Erreur de suppression:", error);
-                alert("La suppression a échoué.");
-            }
-        }
-    });
+    editCardForm.addEventListener('submit', async (e) => { e.preventDefault(); if (!currentCard) return; const updatedData = { deck: document.getElementById('edit-deck').value, recto: document.getElementById('edit-recto').value, verso: document.getElementById('edit-verso').value, }; try { const response = await fetch(`/api/cards/${currentCard.id}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(updatedData), }); const updatedCardFromServer = await response.json(); const cardIndex = allCards.findIndex(c => c.id === currentCard.id); if (cardIndex > -1) { allCards[cardIndex] = updatedCardFromServer; } currentCard = updatedCardFromServer; rectoText.textContent = currentCard.recto; versoText.textContent = currentCard.verso; closeEditModal(); populateDecks(); } catch (error) { console.error("Erreur de modification:", error); alert("La modification a échoué."); } });
+    deleteCardBtn.addEventListener('click', async () => { if (!currentCard) return; if (confirm("Supprimer cette carte ?")) { try { await fetch(`/api/cards/${currentCard.id}`, { method: 'DELETE' }); allCards = allCards.filter(c => c.id !== currentCard.id); populateDecks(); showNextCard(); } catch (error) { console.error("Erreur de suppression:", error); alert("La suppression a échoué."); } } });
 
     // Startup
     loadCards();

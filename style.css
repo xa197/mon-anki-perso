@@ -1,73 +1,162 @@
-/* ... (votre CSS existant) ... */
-
-/* NOUVEAU : Style pour les actions sur la carte */
-.card-actions {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 10;
-    display: flex;
-    gap: 5px;
-}
-.card-actions button {
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    cursor: pointer;
-    opacity: 0.5;
-    transition: opacity 0.2s;
-}
-.card-actions button:hover {
-    opacity: 1;
-}
-
-/* NOUVEAU : Style pour la fenêtre modale d'édition */
-.modal-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-.modal-content {
-    background-color: #2d333b;
-    padding: 20px;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 500px;
-    border: 1px solid #444;
-}
-#edit-card-form {
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-}
-#edit-card-form input,
-#edit-card-form textarea {
-    width: 100%;
-    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     background-color: #24292e;
-    border: 1px solid #444;
     color: #c9d1d9;
-    border-radius: 4px;
+    margin: 0;
+}
+
+#deck-selector-container {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+#deck-selector {
+    padding: 8px;
+    font-size: 0.9em;
+    background-color: #2d333b;
+    color: #c9d1d9;
+    border: 1px solid #444;
+    border-radius: 6px;
+}
+
+#app {
+    text-align: center;
+}
+
+#card-container {
+    width: 500px;
+    height: 300px;
+    perspective: 1000px;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    border: 1px solid #444;
+    border-radius: 12px;
+    background-color: #2d333b;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    padding: 20px;
     box-sizing: border-box;
 }
-.modal-buttons {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    margin-top: 10px;
+
+.card-face img {
+    max-width: 90%;
+    max-height: 150px;
+    margin-top: 15px;
+    border-radius: 6px;
 }
-.modal-buttons button {
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+#card-container.is-flipped .card-front {
+    transform: rotateY(-180deg);
+}
+
+#card-container.is-flipped .card-back {
+    transform: rotateY(0deg);
+}
+
+#controls button {
+    background-color: #373e47;
+    color: #c9d1d9;
+    border: 1px solid #555;
+    padding: 12px 24px;
+    font-size: 1em;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+#controls button:hover {
+    background-color: #444c56;
+}
+
+/* --- Style pour le formulaire d'ajout --- */
+#add-card-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: right;
+    z-index: 50;
+}
+
+#toggle-form-btn {
     padding: 10px 15px;
-}
-.modal-buttons button[type="submit"] {
     background-color: #2ea043;
     color: white;
     border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#add-card-form {
+    background-color: #2d333b; padding: 15px; border-radius: 8px; border: 1px solid #444; margin-top: 10px; width: 250px; display: flex; flex-direction: column; gap: 10px;
+}
+#add-card-form h3 { margin: 0 0 10px 0; text-align: center; }
+#add-card-form input, #add-card-form textarea { width: 100%; padding: 8px; background-color: #24292e; border: 1px solid #444; color: #c9d1d9; border-radius: 4px; box-sizing: border-box; }
+#add-card-form button { background-color: #373e47; }
+
+
+/* --- Style pour les actions sur la carte (Modifier/Supprimer) --- */
+.card-actions {
+    position: absolute; top: 10px; right: 10px; z-index: 10; display: flex; gap: 5px;
+}
+.card-actions button {
+    background: none; border: none; font-size: 1.5em; cursor: pointer; opacity: 0.5; transition: opacity 0.2s;
+}
+.card-actions button:hover { opacity: 1; }
+
+
+/* --- Style pour la fenêtre modale d'édition --- */
+.modal-backdrop {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); display: flex; justify-content: center; align-items: center; z-index: 1000;
+}
+.modal-content {
+    background-color: #2d333b; padding: 20px; border-radius: 8px; width: 90%; max-width: 500px; border: 1px solid #444;
+}
+#edit-card-form { display: flex; flex-direction: column; gap: 10px; }
+#edit-card-form input, #edit-card-form textarea { width: 100%; padding: 10px; background-color: #24292e; border: 1px solid #444; color: #c9d1d9; border-radius: 4px; box-sizing: border-box; }
+.modal-buttons { display: flex; justify-content: flex-end; gap: 10px; margin-top: 10px; }
+.modal-buttons button { padding: 10px 15px; }
+.modal-buttons button[type="submit"] { background-color: #2ea043; color: white; border: none; }
+
+
+/* --- Classe utilitaire pour cacher des éléments --- */
+.hidden {
+    display: none;
+}/* ... (votre CSS existant) ... */
+
+/* NOUVEAU : Style pour le champ de saisie intelligent */
+#deck-input {
+    padding: 8px;
+    font-size: 0.9em;
+    background-color: #2d333b;
+    color: #c9d1d9;
+    border: 1px solid #444;
+    border-radius: 6px;
+    width: 250px; /* Donnons-lui une largeur fixe */
+}
+
+#deck-input::placeholder {
+    color: #888;
 }
