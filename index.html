@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Anki Perso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="card-container" class="card">
+            <div class="card-face card-front">
+                <p id="recto-text"></p>
+            </div>
+            <div class="card-face card-back">
+                <p id="verso-text"></p>
+            </div>
+        </div>
+
+        <div id="controls">
+            <button id="show-answer-btn">Voir la réponse</button>
+            <div id="difficulty-buttons" class="hidden">
+                <button class="difficulty-btn" data-quality="1">À revoir (1j)</button>
+                <button class="difficulty-btn" data-quality="3">Difficile</button>
+                <button class="difficulty-btn" data-quality="4">Correct</button>
+                <button class="difficulty-btn" data-quality="5">Facile</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

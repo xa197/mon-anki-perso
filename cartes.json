@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "recto": "Que signifie 'Codespace' ?",
+    "verso": "Un environnement de développement instantané dans le cloud, hébergé par GitHub.",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2023-10-27T10:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "recto": "Quel est le langage pour la structure d'une page web ?",
+    "verso": "HTML (HyperText Markup Language)",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2023-10-27T10:00:00.000Z"
+  },
+  {
+    "id": 3,
+    "recto": "Quel est le langage pour le style d'une page web ?",
+    "verso": "CSS (Cascading Style Sheets)",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2023-10-27T10:00:00.000Z"
+  }
+]
