@@ -1,15 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Éléments UI
     const cardContainer = document.getElementById('card-container');
     const rectoText = document.getElementById('recto-text');
     const versoText = document.getElementById('verso-text');
-    const rectoImage = document.getElementById('recto-image'); // NOUVEAU
-    const versoImage = document.getElementById('verso-image'); // NOUVEAU
+    const rectoImage = document.getElementById('recto-image');
+    const versoImage = document.getElementById('verso-image');
     const showAnswerBtn = document.getElementById('show-answer-btn');
     const difficultyButtons = document.getElementById('difficulty-buttons');
     const difficultyBtns = document.querySelectorAll('.difficulty-btn');
+    const deckSelector = document.getElementById('deck-selector'); // NOUVEAU
 
+    // Données de l'application
     let allCards = [];
     let currentCard = null;
+    let currentDeck = 'all'; // NOUVEAU
+
+    // --- FONCTIONS ---
 
     async function loadCards() {
         const savedProgress = localStorage.getItem('ankiPersoProgress');
@@ -19,12 +25,33 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch('cartes.json');
             allCards = await response.json();
         }
+        populateDecks(); // NOUVEAU
         showNextCard();
     }
+    
+    // NOUVELLE FONCTION pour remplir le menu des paquets
+    function populateDecks() {
+        const decks = [...new Set(allCards.map(card => card.deck))];
+        decks.forEach(deck => {
+            if (deck) {
+                const option = document.createElement('option');
+                option.value = deck;
+                option.textContent = deck;
+                deckSelector.appendChild(option);
+            }
+        });
+    }
 
+    // MODIFICATION MAJEURE de cette fonction
     function showNextCard() {
         const now = new Date();
-        const dueCards = allCards.filter(card => new Date(card.nextReview) <= now);
+        
+        let cardsInScope = allCards;
+        if (currentDeck !== 'all') {
+            cardsInScope = allCards.filter(card => card.deck === currentDeck);
+        }
+
+        const dueCards = cardsInScope.filter(card => new Date(card.nextReview) <= now);
 
         if (dueCards.length > 0) {
             currentCard = dueCards[Math.floor(Math.random() * dueCards.length)];
@@ -32,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
             rectoText.textContent = currentCard.recto;
             versoText.textContent = currentCard.verso;
 
-            // Logique pour afficher ou cacher les images - NOUVEAU
             if (currentCard.rectoImage) {
                 rectoImage.src = currentCard.rectoImage;
                 rectoImage.style.display = 'block';
@@ -51,28 +77,14 @@ document.addEventListener('DOMContentLoaded', () => {
             showAnswerBtn.classList.remove('hidden');
             difficultyButtons.classList.add('hidden');
         } else {
-            rectoText.textContent = "🎉 Bravo ! Aucune carte à réviser pour le moment.";
+            rectoText.textContent = "🎉 Bravo ! Aucune carte à réviser dans ce paquet.";
             versoText.textContent = "";
-            rectoImage.style.display = 'none'; // Cacher les images s'il n'y a pas de cartes
+            rectoImage.style.display = 'none';
             versoImage.style.display = 'none';
             showAnswerBtn.classList.add('hidden');
             difficultyButtons.classList.add('hidden');
         }
     }
-
-    showAnswerBtn.addEventListener('click', () => {
-        cardContainer.classList.add('is-flipped');
-        showAnswerBtn.classList.add('hidden');
-        difficultyButtons.classList.remove('hidden');
-    });
-
-    difficultyBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const quality = parseInt(e.target.dataset.quality, 10);
-            updateCard(quality);
-            showNextCard();
-        });
-    });
 
     function updateCard(quality) {
         if (quality < 3) {
@@ -99,5 +111,28 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('ankiPersoProgress', JSON.stringify(allCards));
     }
 
+    // --- ÉVÉNEMENTS ---
+
+    showAnswerBtn.addEventListener('click', () => {
+        cardContainer.classList.add('is-flipped');
+        showAnswerBtn.classList.add('hidden');
+        difficultyButtons.classList.remove('hidden');
+    });
+
+    difficultyBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const quality = parseInt(e.target.dataset.quality, 10);
+            updateCard(quality);
+            showNextCard();
+        });
+    });
+    
+    // NOUVEAU : Gérer le changement de paquet
+    deckSelector.addEventListener('change', (e) => {
+        currentDeck = e.target.value;
+        showNextCard();
+    });
+
+    // --- DÉMARRAGE ---
     loadCards();
 });
