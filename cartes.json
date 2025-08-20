@@ -28,9 +28,9 @@
     "rectoImage": null,
     "verso": "Évaporation, Condensation, Précipitation, Ruissellement.",
     "versoImage": "images/cycle_eau.png",
-    "interval": 1,
+    "interval": 6,
     "easeFactor": 2.5,
-    "nextReview": "2023-10-27T10:00:00.000Z"
+    "nextReview": "2025-08-26T16:55:09.452Z"
   },
   {
     "id": 4,
@@ -42,5 +42,16 @@
     "interval": 1,
     "easeFactor": 2.5,
     "nextReview": "2023-10-27T10:00:00.000Z"
+  },
+  {
+    "id": 1755708926375,
+    "deck": "item i",
+    "recto": "jhk",
+    "verso": "gjhgj",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-20T16:55:26.376Z"
   }
 ]

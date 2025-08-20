@@ -8,34 +8,49 @@
 </head>
 <body>
     <div id="deck-selector-container">
-        <label for="deck-selector">Paquet :</label>
-        <select id="deck-selector">
-            <option value="all">Tous les paquets</option>
-        </select>
+        <!-- ... reste identique ... -->
     </div>
 
     <div id="app">
         <div id="card-container" class="card">
+            <!-- NOUVEAU : Icônes d'action -->
+            <div class="card-actions">
+                <button id="edit-card-btn" title="Modifier la carte">✏️</button>
+                <button id="delete-card-btn" title="Supprimer la carte">🗑️</button>
+            </div>
+            
             <div class="card-face card-front">
-                <p id="recto-text"></p>
-                <img id="recto-image" src="" alt="">
+                <!-- ... reste identique ... -->
             </div>
             <div class="card-face card-back">
-                <p id="verso-text"></p>
-                <img id="verso-image" src="" alt="">
+                <!-- ... reste identique ... -->
             </div>
         </div>
-
         <div id="controls">
-            <button id="show-answer-btn">Voir la réponse</button>
-            <div id="difficulty-buttons" class="hidden">
-                <button class="difficulty-btn" data-quality="1">À revoir (1j)</button>
-                <button class="difficulty-btn" data-quality="3">Difficile</button>
-                <button class="difficulty-btn" data-quality="4">Correct</button>
-                <button class="difficulty-btn" data-quality="5">Facile</button>
-            </div>
+            <!-- ... reste identique ... -->
         </div>
     </div>
+    
+    <div id="add-card-container">
+        <!-- ... reste identique ... -->
+    </div>
+
+    <!-- NOUVEAU : Fenêtre modale pour l'édition -->
+    <div id="edit-modal" class="modal-backdrop hidden">
+        <div class="modal-content">
+            <h3>Modifier la Carte</h3>
+            <form id="edit-card-form">
+                <input type="text" id="edit-deck" placeholder="Paquet" required>
+                <textarea id="edit-recto" placeholder="Recto" required></textarea>
+                <textarea id="edit-verso" placeholder="Verso" required></textarea>
+                <div class="modal-buttons">
+                    <button type="submit">Enregistrer</button>
+                    <button type="button" id="cancel-edit-btn">Annuler</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
