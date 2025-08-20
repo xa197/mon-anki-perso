@@ -84,3 +84,70 @@ form input:focus, form textarea:focus { outline: none; border-color: var(--accen
 .modal-buttons button[type="submit"] { background-color: var(--accent-color); border-color: var(--accent-color); color: var(--bg-color); font-weight: 700; }
 
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+/* --- NOUVEAU : ATELIER DE CRÉATION (VUE ACCUEIL) --- */
+.workshop-container {
+    margin-top: 60px;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.workshop-container h2 {
+    margin-top: 0;
+    text-align: center;
+    font-weight: 500;
+}
+
+.workshop-container p {
+    text-align: center;
+    color: var(--secondary-text-color);
+    margin-bottom: 30px;
+}
+
+.workshop-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#workshop-item-selector {
+    padding: 12px;
+    font-size: 1em;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--primary-text-color);
+    border-radius: var(--border-radius);
+    font-family: 'Poppins', sans-serif;
+}
+
+#workshop-textarea {
+    min-height: 250px;
+    resize: vertical;
+    padding: 12px;
+    font-size: 1em;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--primary-text-color);
+    border-radius: var(--border-radius);
+    font-family: 'Poppins', sans-serif;
+}
+
+#workshop-save-btn {
+    padding: 15px;
+    font-size: 1.1em;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    font-weight: 700;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#workshop-save-btn:hover {
+    background-color: var(--accent-color-light);
+}

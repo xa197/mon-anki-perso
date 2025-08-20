@@ -4,17 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Anki Perso</title>
-    
-    <!-- NOUVELLE LIGNE POUR LA POLICE DE CARACTÈRES -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Le reste de votre HTML est identique. Inutile de le modifier, -->
-    <!-- mais je le remets ici pour que le fichier soit complet. -->
 
-    <!-- ======================= VUE ACCUEIL ======================= -->
+    <!-- ======================= VUE ACCUEIL (modifiée) ======================= -->
     <div id="home-view">
         <div class="home-container">
             <h1>Mon Anki Perso</h1>
@@ -22,74 +17,32 @@
                 <button id="go-to-review-btn" class="home-btn">Réviser les cartes</button>
                 <button id="go-to-manage-btn" class="home-btn">Ajouter / Gérer les cartes</button>
             </div>
-        </div>
-    </div>
 
-    <!-- ======================= VUE RÉVISION ======================= -->
-    <div id="review-view" class="hidden">
-        <div class="review-header">
-            <button id="back-to-home-btn">← Accueil</button>
-            <div id="item-selector-container">
-                <label for="item-input">Item :</label>
-                <input type="text" id="item-input" list="item-options" placeholder="Filtrer par nom ou numéro...">
-                <datalist id="item-options"></datalist>
-            </div>
-        </div>
-        <div id="app">
-            <div id="card-container" class="card">
-                <div class="card-actions">
-                    <button id="edit-card-btn" title="Modifier">✏️</button>
-                    <button id="delete-card-btn" title="Supprimer">🗑️</button>
-                </div>
-                <div class="card-face card-front"><p id="recto-text"></p><img id="recto-image" src="" alt=""></div>
-                <div class="card-face card-back"><p id="verso-text"></p><img id="verso-image" src="" alt=""></div>
-            </div>
-            <div id="controls">
-                <button id="show-answer-btn">Voir la réponse</button>
-                <div id="difficulty-buttons" class="hidden">
-                    <button class="difficulty-btn" data-quality="1">À revoir</button>
-                    <button class="difficulty-btn" data-quality="3">Difficile</button>
-                    <button class="difficulty-btn" data-quality="4">Correct</button>
-                    <button class="difficulty-btn" data-quality="5">Facile</button>
+            <!-- NOUVELLE SECTION : ATELIER DE CRÉATION -->
+            <div class="workshop-container">
+                <h2>Atelier de création</h2>
+                <p>Choisissez un item pour y associer un texte ou des notes.</p>
+                <div class="workshop-form">
+                    <select id="workshop-item-selector">
+                        <option value="">-- Choisir un item --</option>
+                    </select>
+                    <textarea id="workshop-textarea" placeholder="Collez vos phrases ou notes ici..."></textarea>
+                    <button id="workshop-save-btn">Enregistrer le texte</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ======================= VUE DE GESTION ======================= -->
-    <div id="manage-view" class="hidden">
-        <div class="manage-header">
-            <button id="back-to-home-from-manage-btn">← Accueil</button>
-            <h2>Ajouter une nouvelle carte</h2>
-        </div>
-        <div id="add-card-form-container">
-            <form id="add-card-form">
-                <input type="text" id="new-item" placeholder="Nom de l'item" required list="item-options">
-                <textarea id="new-recto" placeholder="Recto (Question, vous pouvez coller une image ici)" required></textarea>
-                <div class="image-preview" id="recto-preview-container"></div>
-                <textarea id="new-verso" placeholder="Verso (Réponse, vous pouvez coller une image ici)" required></textarea>
-                <div class="image-preview" id="verso-preview-container"></div>
-                <button type="submit">Enregistrer la carte</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- ======================= MODALE D'ÉDITION ======================= -->
-    <div id="edit-modal" class="modal-backdrop hidden">
-        <div class="modal-content">
-            <h3>Modifier la Carte</h3>
-            <form id="edit-card-form">
-                <input type="text" id="edit-item" placeholder="Item" required list="item-options">
-                <textarea id="edit-recto" placeholder="Recto" required></textarea>
-                <textarea id="edit-verso" placeholder="Verso" required></textarea>
-                <div class="modal-buttons">
-                    <button type="submit">Enregistrer</button>
-                    <button type="button" id="cancel-edit-btn">Annuler</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
+    <!-- Les autres vues (Révision, Gestion) et la Modale sont inchangées -->
+    <div id="review-view" class="hidden"> ... </div>
+    <div id="manage-view" class="hidden"> ... </div>
+    <div id="edit-modal" class="modal-backdrop hidden"> ... </div>
+    
     <script src="script.js"></script>
+
+    <!-- Code complet des autres vues pour être sûr -->
+    <div id="review-view" class="hidden"> <div class="review-header"> <button id="back-to-home-btn">← Accueil</button> <div id="item-selector-container"> <label for="item-input">Item :</label> <input type="text" id="item-input" list="item-options" placeholder="Filtrer..."> <datalist id="item-options"></datalist> </div> </div> <div id="app"> <div id="card-container" class="card"> <div class="card-actions"> <button id="edit-card-btn" title="Modifier">✏️</button> <button id="delete-card-btn" title="Supprimer">🗑️</button> </div> <div class="card-face card-front"><p id="recto-text"></p><img id="recto-image" src="" alt=""></div> <div class="card-face card-back"><p id="verso-text"></p><img id="verso-image" src="" alt=""></div> </div> <div id="controls"> <button id="show-answer-btn">Voir la réponse</button> <div id="difficulty-buttons" class="hidden"> <button class="difficulty-btn" data-quality="1">À revoir</button> <button class="difficulty-btn" data-quality="3">Difficile</button> <button class="difficulty-btn" data-quality="4">Correct</button> <button class="difficulty-btn" data-quality="5">Facile</button> </div> </div> </div> </div>
+    <div id="manage-view" class="hidden"> <div class="manage-header"> <button id="back-to-home-from-manage-btn">← Accueil</button> <h2>Ajouter une nouvelle carte</h2> </div> <div id="add-card-form-container"> <form id="add-card-form"> <input type="text" id="new-item" placeholder="Nom de l'item" required list="item-options"> <textarea id="new-recto" placeholder="Recto (coller image ici)" required></textarea> <div class="image-preview" id="recto-preview-container"></div> <textarea id="new-verso" placeholder="Verso (coller image ici)" required></textarea> <div class="image-preview" id="verso-preview-container"></div> <button type="submit">Enregistrer la carte</button> </form> </div> </div>
+    <div id="edit-modal" class="modal-backdrop hidden"> <div class="modal-content"> <h3>Modifier la Carte</h3> <form id="edit-card-form"> <input type="text" id="edit-item" placeholder="Item" required list="item-options"> <textarea id="edit-recto" placeholder="Recto" required></textarea> <textarea id="edit-verso" placeholder="Verso" required></textarea> <div class="modal-buttons"> <button type="submit">Enregistrer</button> <button type="button" id="cancel-edit-btn">Annuler</button> </div> </form> </div> </div>
 </body>
 </html>
