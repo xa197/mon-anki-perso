@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardContainer = document.getElementById('card-container');
     const rectoText = document.getElementById('recto-text');
     const versoText = document.getElementById('verso-text');
+    const rectoImage = document.getElementById('recto-image'); // NOUVEAU
+    const versoImage = document.getElementById('verso-image'); // NOUVEAU
     const showAnswerBtn = document.getElementById('show-answer-btn');
     const difficultyButtons = document.getElementById('difficulty-buttons');
     const difficultyBtns = document.querySelectorAll('.difficulty-btn');
@@ -26,14 +28,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (dueCards.length > 0) {
             currentCard = dueCards[Math.floor(Math.random() * dueCards.length)];
+            
             rectoText.textContent = currentCard.recto;
             versoText.textContent = currentCard.verso;
+
+            // Logique pour afficher ou cacher les images - NOUVEAU
+            if (currentCard.rectoImage) {
+                rectoImage.src = currentCard.rectoImage;
+                rectoImage.style.display = 'block';
+            } else {
+                rectoImage.style.display = 'none';
+            }
+
+            if (currentCard.versoImage) {
+                versoImage.src = currentCard.versoImage;
+                versoImage.style.display = 'block';
+            } else {
+                versoImage.style.display = 'none';
+            }
+
             cardContainer.classList.remove('is-flipped');
             showAnswerBtn.classList.remove('hidden');
             difficultyButtons.classList.add('hidden');
         } else {
             rectoText.textContent = "🎉 Bravo ! Aucune carte à réviser pour le moment.";
             versoText.textContent = "";
+            rectoImage.style.display = 'none'; // Cacher les images s'il n'y a pas de cartes
+            versoImage.style.display = 'none';
             showAnswerBtn.classList.add('hidden');
             difficultyButtons.classList.add('hidden');
         }
