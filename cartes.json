@@ -1,362 +1,3271 @@
 [
-  { "id": 1, "deck": "1 : La relation médecin-malade", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 2, "deck": "2 : Les valeurs professionnelles", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 3, "deck": "3 : Le raisonnement et la décision en médecine", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 4, "deck": "4 : La sécurité du patient et la gestion des risques", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 5, "deck": "5 : La gestion des erreurs et des plaintes ; l’aléa thérapeutique", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 6, "deck": "6 : L’organisation de l’exercice clinique et sécurité des patients", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 7, "deck": "7 : Les droits individuels et collectifs du patient", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 8, "deck": "8 : Éthique médicale", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 9, "deck": "9 : Certificats médicaux. Décès et législation. Prélèvements d’organes et législation", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 10, "deck": "10 : Violences sexuelles", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 11, "deck": "11 : Soins psychiatriques sans consentement", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 12, "deck": "12 : Responsabilités médicale pénale, civile, administrative et disciplinaire", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 13, "deck": "13 : Principes d’une démarche qualité et évaluation des pratiques professionnelles", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 14, "deck": "14 : Formation tout au long de la vie", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 15, "deck": "15 : Organisation du système de soins", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 16, "deck": "16 : La sécurité sociale", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 17, "deck": "17 : Le système conventionnel", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 18, "deck": "18 : Méthodologie de la recherche expérimentale et clinique", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 19, "deck": "19 : Mesure de l’état de santé de la population", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 20, "deck": "20 : Interprétation d’une enquête épidémiologique", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 21, "deck": "21 : Examen prénuptial", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 22, "deck": "22 : Grossesse normale", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 23, "deck": "23 : Principales complications de la grossesse", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 24, "deck": "24 : Grossesse extra-utérine", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 25, "deck": "25 : Douleur abdominale aiguë chez une femme enceinte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 26, "deck": "26 : Risques fœtaux : infection, médicaments, toxiques, irradiation", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 27, "deck": "27 : Infection urinaire au cours de la grossesse", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 28, "deck": "28 : Risques professionnels pour la maternité, liés au travail de la mère.", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 29, "deck": "29 : Prématurité et retard de croissance intra-utérin : facteurs de risque et prévention", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 30, "deck": "30 : Accouchement, délivrance et suites de couches normales", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 31, "deck": "31 : Évaluation et soins du nouveau-né à terme", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 32, "deck": "32 : Allaent maternel", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 33, "deck": "33 : Suites de couches pathologiques", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 34, "deck": "34 : Anomalies du cycle menstruel. Métrorragies", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 35, "deck": "35 : Contraception", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 36, "deck": "36 : Interruption volontaire de grossesse", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 37, "deck": "37 : Stérilité du couple : conduite de la première consultation", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 38, "deck": "38 : Assistance médicale à la procréation (AMP)", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 39, "deck": "39 : Algies pelviennes chez la femme", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 40, "deck": "40 : Aménorrhée", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 41, "deck": "41 : Hémorragie génitale chez la femme", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 42, "deck": "42 : Tuméfaction pelvienne chez la femme", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 43, "deck": "43 : Problèmes posés par les maladies génétiques, à propos", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 44, "deck": "44 : Suivi d’un nourrisson, d’un enfant et d’un adolescent normal", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 45, "deck": "45 : Alimentation et besoins nutritionnels du nourrisson et de l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 46, "deck": "46 : Développement buccodentaire et anomalies", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 47, "deck": "47 : Puberté normale et pathologique", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 48, "deck": "48 : Pathologie génito-scrotale chez le garçon et chez l’homme", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 49, "deck": "49 : Troubles de la miction chez l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 50, "deck": "50 : Strabisme de l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 51, "deck": "51 : Retard de croissance staturo-pondérale", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 52, "deck": "52 : Boiterie chez l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 53, "deck": "53 : Développement psychomoteur du nourrisson et de l’enfant, troubles de l’apprentissage", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 54, "deck": "54 : L’enfant handicapé : orientation et prise en charge", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 55, "deck": "55 : Maltraitance et enfants en danger. Protection maternelle et infantile", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 56, "deck": "56 : Sexualité normale et ses troubles", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 57, "deck": "57 : Sujets en situation de précarité", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 58, "deck": "58 : Facteurs de risque, prévention, dépistage des troubles psychiques", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 59, "deck": "59 : Classifications des troubles mentaux", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 60, "deck": "60 : Organisation de l’offre de soins en psychiatrie, de l’enfant à la personne âgée", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 61, "deck": "61 : Trouble schizophrénique de l’adolescent et de l’adulte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 62, "deck": "62 : Trouble bipolaire de l’adolescent et de l’adulte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 63, "deck": "63 : Trouble délirant persistant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 64, "deck": "64 : Trouble dépressif, trouble anxieux généralisé, trouble panique, trouble phobique, trouble obsessionnel compulsif, état de stress post-traumatique, trouble de l’adaptation, trouble de la personnalité.", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 65, "deck": "65 : Troubles envahissants du développement", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 66, "deck": "66 : Troubles du comportement de l’adolescent", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 67, "deck": "67 : Troubles psychiques de la grossesse et du post-partum", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 68, "deck": "68 : Troubles psychiques du sujet âgé", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 69, "deck": "69 : Troubles des conduites alimentaires chez l’adolescent et l’adulte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 70, "deck": "70 : Troubles somatoformes à tous les âges", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 71, "deck": "71 : Différents types de techniques psychothérapeutiques", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 72, "deck": "72 : Prescription et surveillance des psychotropes", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 73, "deck": "73 : Addiction au tabac", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 74, "deck": "74 : Addiction à l’alcool", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 75, "deck": "75 : Addiction aux médicaments psychotropes (benzodiazépines et apparentés)", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 76, "deck": "76 : Addiction au cannabis, cocaïne, amphétamines, opiacés, drogues de synthèse", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 77, "deck": "77 : Addictions comportementales", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 78, "deck": "78 : Dopage", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 79, "deck": "79 : Altération de la fonction visuelle", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 80, "deck": "80 : Anomalie de la vision d’apparition brutale", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 81, "deck": "81 : Œil rouge et/ou douloureux", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 82, "deck": "82 : Glaucome chronique", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 83, "deck": "83 : Troubles de la réfraction", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 84, "deck": "84 : Pathologie des paupières", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 85, "deck": "85 : Épistaxis", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 86, "deck": "86 : Trouble aigu de la parole. Dysphonie", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 87, "deck": "87 : Altération de la fonction auditive", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 88, "deck": "88 : Pathologie des glandes salivaires", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 89, "deck": "89 : Déficit neurologique récent", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 90, "deck": "90 : Déficit moteur et/ou sensitif des membres", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 91, "deck": "91 : Compression médullaire non traumatique et syndrome de la queue de cheval", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 92, "deck": "92 : Rachialgie", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 93, "deck": "93 : Radiculalgie et syndrome canalaire", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 94, "deck": "94 : Neuropathies périphériques", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 95, "deck": "95 : Polyradiculonévrite aiguë inflammatoire (syndrome de Guillain-Barré)", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 96, "deck": "96 : Myasthénie", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 97, "deck": "97 : Migraine, névralgie du trijumeau et algies de la face", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 98, "deck": "98 : Céphalée aiguë et chronique chez l’adulte et l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 99, "deck": "99 : Paralysie faciale", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 100, "deck": "100 : Diplopie", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 101, "deck": "101 : Vertige", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 102, "deck": "102 : Sclérose en plaques", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 103, "deck": "103 : Épilepsie de l’enfant et de l’adulte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 104, "deck": "104 : Maladie de Parkinson", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 105, "deck": "105 : Mouvements anormaux", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 106, "deck": "106 : Confusion, démences", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 107, "deck": "107 : Troubles de la marche et de l’équilibre", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 108, "deck": "108 : Troubles du sommeil de l’enfant et de l’adulte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 109, "deck": "109 : Dermatoses faciales : acné, rosacée, dermatite séborrhéique", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 110, "deck": "110 : Dermatose bulleuse touchant la peau et/ou les muqueuses externes", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 111, "deck": "111 : Hémangiomes et malformations vasculaires cutanées", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 112, "deck": "112 : Exanthème et érythrodermie de l’adulte et de l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 113, "deck": "113 : Prurit", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 114, "deck": "114 : Psoriasis", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 115, "deck": "115 : Vieillissement normal (1)", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 116, "deck": "116 : Complications de l’immobilité et du décubitus. Prévention et prise en charge", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 117, "deck": "117 : Le handicap psychique", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 118, "deck": "118 : Principales techniques de rééducation et de réadaptation", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 119, "deck": "119 : Vieillissement normal (2)", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 120, "deck": "120 : Ménopause et andropause", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },  { "id": 121, "deck": "121 : Troubles de la miction et incontinence urinaire de l’adulte et du sujet âgé", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 122, "deck": "122 : Trouble de l’érection", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 123, "deck": "123 : Hypertrophie bénigne de la prostate", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 124, "deck": "124 : Ostéopathies fragilisantes", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 125, "deck": "125 : Arthrose", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 126, "deck": "126 : La personne âgée malade", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 127, "deck": "127 : Déficit neurosensoriel chez le sujet âgé", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 128, "deck": "128 : Troubles de la marche et de l’équilibre", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 129, "deck": "129 : Troubles cognitifs du sujet âgé", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 130, "deck": "130 : Autonomie et dépendance chez le sujet âgé", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 131, "deck": "131 : Bases neurophysiologiques, mécanismes physiopathologiques d’une douleur aiguë et d’une douleur chronique", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 132, "deck": "132 : Thérapeutiques antalgiques, médicamenteuses et non médicamenteuses", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 133, "deck": "133 : Anesthésie locale, locorégionale et générale’", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 134, "deck": "134 : Douleur chez l’enfant : évaluation et traents antalgiques", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 135, "deck": "135 : Douleur en santé mentale", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 136, "deck": "136 : Soins palliatifs pluridisciplinaires chez un malade en phase palliative ou terminale d’une maladie grave, chronique ou létale (1). Principaux repères cliniques. Modalités d’organisation des équipes, en établissement de santé et en et en ambulatoire", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 137, "deck": "137 : Soins palliatifs pluridisciplinaires chez un malade en phase palliative ou terminale d’une maladie grave, chronique ou létale (2). Accompagnement de la personne malade et de son entourage. Principaux repères éthiques.", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 138, "deck": "138 : Soins palliatifs pluridisciplinaires chez un malade en phase palliative ou terminale d’une maladie grave, chronique ou létale (3). La sédation pour détresse en phase terminale et dans des situations spécifiques et complexes en fin de vie. Réponse à la demande d’euthanasie ou de suicide assisté.", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 139, "deck": "139 : Connaître les aspects spécifiques des soins palliatifs en pédiatrie", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 140, "deck": "140 : Connaître les aspects spécifiques des soins palliatifs en réanimation", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 141, "deck": "141 : Deuil normal et pathologique", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 142, "deck": "142 : Surveillance des maladies infectieuses transmissibles", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 143, "deck": "143 : Vaccinations", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 144, "deck": "144 : Fièvre aiguë chez l’enfant et l’adulte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 145, "deck": "145 : Infections naso-sinusiennes de l’adulte et de l’enfan", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 146, "deck": "146 : Angines de l’adulte et de l’enfant et rhinopharyngites de l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 147, "deck": "147 : Otites infectieuses de l’adulte et de l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 148, "deck": "148 : Méningites, méningoencéphalites chez l’adulte et l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 149, "deck": "149 : Endocardite infectieuse", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 150, "deck": "150 : Surveillance des porteurs de valve et prothèses vasculaires", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 151, "deck": "151 : Infections broncho pulmonaires communautaires de l’adulte et de l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 152, "deck": "152 : Infections cutanéo-muqueuses et des phanères, bactériennes et mycosiques", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 153, "deck": "153 : Infections ostéo articulaires (IOA) de l’enfant et de l’adulte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 154, "deck": "154 : Septicémie / Bactériémie / Fongémie de l’adulte et de l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 155, "deck": "155 : Tuberculose de l’adulte et de l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 156, "deck": "156 : Tétanos", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 157, "deck": "157 : Infections urinaires de l’enfant et de l’adulte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 158, "deck": "158 : Infections sexuellement transmissibles (IST) : gonococcies, chlamydioses, syphilis, papillomavirus humain (HPV), trichomonose", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 159, "deck": "159 : Coqueluche", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 160, "deck": "160 : Exanthèmes fébriles de l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 161, "deck": "161 : Oreillons", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 162, "deck": "162 : Grippe", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 163, "deck": "163 : Hépatites virales", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 164, "deck": "164 : Infections à herpès virus du sujet immunocompétent", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 165, "deck": "165 : Infections à VIH", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 166, "deck": "166 : Paludisme", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 167, "deck": "167 : Gale et pédiculose", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 168, "deck": "168 : Parasitoses digestives : giardiose, amoebose, téniasis, ascaridiose, oxyurose", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 169, "deck": "169 : Zoonoses", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 170, "deck": "170 : Pathologie infectieuse chez les migrants adultes et enfants", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 171, "deck": "171 : Voyage en pays tropical de l’adulte et de l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 172, "deck": "172 : Diarrhées infectieuses de l’adulte et de l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 173, "deck": "173 : Prescription et surveillance des anti-infectieux chez l’adulte et l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 174, "deck": "174 : Risques émergents, bioterrorisme, maladies hautement transmissibles", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 175, "deck": "175 : Risques sanitaires liés à l’eau et à l’alimentation. Toxi-infections alimentaires", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 176, "deck": "176 : Risques sanitaires liés aux irradiations. Radioprotection", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 177, "deck": "177 : La sécurité sanitaire des produits destinés à l’homme. La veille sanitaire", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 178, "deck": "178 : Environnement professionnel et santé au travail", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 179, "deck": "179 : Organisation de la médecine du travail. Prévention des risques professionnels", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 180, "deck": "180 : Accidents du travail et maladies professionnelles : définitions et enjeux", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 181, "deck": "181 : Réaction inflammatoire : aspects biologiques et cliniques. Conduite à tenir", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 182, "deck": "182 : Hypersensibilités et allergies chez l’enfant et l’adulte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 183, "deck": "183 : Hypersensibilités et allergies cutanéomuqueuses, urticaire, dermatites atopique et de contact", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 184, "deck": "184 : Hypersensibilité et Allergies respiratoires : asthme, rhinite", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 185, "deck": "185 : Déficit immunitaire", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 186, "deck": "186 : Fièvre prolongée", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 187, "deck": "187 : Fièvre chez un patient immunodéprimé", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 188, "deck": "188 : Pathologies auto-immunes", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 189, "deck": "189 : Vascularite systémique", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 190, "deck": "190 : Lupus érythémateux disséminé. Syndrome des anti-phospholipides", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 191, "deck": "191 : Artérite à cellules géantes", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 192, "deck": "192 : Polyarthrite rhumatoïde", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 193, "deck": "193 : Spondylarthrite inflammatoire", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 194, "deck": "194 : Arthropathie microcristalline", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 195, "deck": "195 : Syndrome douloureux régional complexe (ex algodystrophie)", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 196, "deck": "196 : Douleur et épanchement articulaire. Arthrite d’évolution récente", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 197, "deck": "197 : Transplantation d’organes", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 198, "deck": "198 : Biothérapies et thérapies ciblées", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 199, "deck": "199 : Dyspnée aiguë et chronique", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 200, "deck": "200 : Toux chez l’enfant et chez l’adulte (avec le traent)", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 201, "deck": "201 : Hémoptysie", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 202, "deck": "202 : Épanchement pleural", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 203, "deck": "203 : Opacités et masses intra-thoraciques chez l’enfant et chez l’adulte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 204, "deck": "204 : Insuffisance respiratoire chronique", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 205, "deck": "205 : Bronchopneumopathie chronique obstructive chez l’adulte et l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 206, "deck": "206 : Pneumopathie interstitielle diffuse", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 207, "deck": "207 : Sarcoïdose", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 208, "deck": "208 : Hémogramme chez l’adulte et l’enfant : indications et interprétation", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 209, "deck": "209 : Anémie chez l’adulte et l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 210, "deck": "210 : Thrombopénie chez l’adulte et l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 211, "deck": "211 : Purpuras chez l’adulte et l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 212, "deck": "212 : Syndrome hémorragique d’origine hématologique", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 213, "deck": "213 : Syndrome mononucléosique", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 214, "deck": "214 : Éosinophilie", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 215, "deck": "215 : Pathologie du fer chez l’adulte et l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 216, "deck": "216 : Adénopathie superficielle de l’adulte et de l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 217, "deck": "217 : Amylose", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 218, "deck": "218 : Athérome", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 219, "deck": "219 : Facteurs de risque cardio-vasculaire et prévention", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 220, "deck": "220 : Dyslipidémies", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 221, "deck": "221 : Hypertension artérielle de l’adulte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 222, "deck": "222 : Hypertension artérielle pulmonaire de l’enfant et de l’adulte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 223, "deck": "223 : Artériopathie oblitérante de l’aorte, des artères viscérales et des membres inférieurs ; anévrysmes", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 224, "deck": "224 : Thrombose veineuse profonde et embolie pulmonaire", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 225, "deck": "225 : Insuffisance veineuse chronique. Varices", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 226, "deck": "226 : Ulcère de jambe", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 227, "deck": "227 : Surveillance et complications des abords veineux", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 228, "deck": "228 : Douleur thoracique aiguë et chronique", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 229, "deck": "229 : Électrocardiogramme : indications et interprétations", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 230, "deck": "230 : Fibrillation atriale", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 231, "deck": "231 : Valvulopathies", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 232, "deck": "232 : Insuffisance cardiaque de l’adulte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 233, "deck": "233 : Péricardite aiguë et tamponnade", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 234, "deck": "234 : Troubles de la conduction intracardiaque", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 235, "deck": "235 : Palpitations", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 236, "deck": "236 : Souffle cardiaque chez l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 237, "deck": "237 : Acrosyndromes (phénomène de Raynaud, érythermalgie, acrocyanose, engelures, ischémie digitale)", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 238, "deck": "238 : Hypoglycémie chez l’adulte et l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 239, "deck": "239 : Goitre, nodules thyroïdiens et cancers thyroïdiens", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 240, "deck": "240 : Hyperthyroïdie", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },  { "id": 241, "deck": "241 : Hypothyroïdie", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 242, "deck": "242 : Adénome hypophysaire", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 243, "deck": "243 : Insuffisance surrénale chez l’adulte et l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 244, "deck": "244 : Gynécomastie", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 245, "deck": "245 : Diabète sucré de types 1 et 2 de l’enfant et de l’adulte. Complications", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 246, "deck": "246 : Prévention primaire par la nutrition chez l’adulte et l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 247, "deck": "247 : Modifications thérapeutiques du mode de vie (alimentation et activité physique)", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 248, "deck": "248 : Dénutrition chez l’adulte et l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 249, "deck": "249 : Amaigrissement à tous les âges", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 250, "deck": "250 : Troubles nutritionnels chez le sujet âgé", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 251, "deck": "251 : Obésité de l’enfant et de l’adulte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 252, "deck": "252 : Nutrition et grossesse", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 253, "deck": "253 : Aptitude au sport chez l’adulte et l’enfant ; besoins nutritionnels chez le sportif", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 254, "deck": "254 : Œdèmes des membres inférieurs localisés ou généralisés", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 255, "deck": "255 : Élévation de la créatininémie", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 256, "deck": "256 : Protéinurie et syndrome néphrotique de chez l’l’adulte et de l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 257, "deck": "257 : Hématurie", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 258, "deck": "258 : Néphropathie glomérulaire", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 259, "deck": "259 : Néphropathie interstitielle", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 260, "deck": "260 : Néphropathie vasculaire", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 261, "deck": "261 : Insuffisance rénale chronique chez l’adulte et l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 262, "deck": "262 : Lithiase urinaire", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 263, "deck": "263 : Polykystose rénale", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 264, "deck": "264 : Prescription et surveillance des diurétiques", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 265, "deck": "265 : Troubles de l’équilibre acido-basique et désordres hydro-électrolytiques", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 266, "deck": "266 : Hypercalcémie", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 267, "deck": "267 : Douleurs abdominales et lombaires aiguës chez l’enfant et chez l’adulte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 268, "deck": "268 : Reflux gastro-œsophagien, hernie hiatale", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 269, "deck": "269 : Ulcère gastrique et duodénal. Gastrite", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 270, "deck": "270 : Dysphagie", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 271, "deck": "271 : Vomissements du nourrisson, de l’enfant et de l’adulte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 272, "deck": "272 : Splénomégalie", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 273, "deck": "273 : Hépatomégalie et masse abdominale", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 274, "deck": "274 : Lithiase biliaire et complications", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 275, "deck": "275 : Ictère", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 276, "deck": "276 : Cirrhose et complications", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 277, "deck": "277 : Ascite", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 278, "deck": "278 : Pancréatite chronique", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 279, "deck": "279 : Maladies Inflammatoires Chroniques de l’Intestin (MICI) chez l’adulte et l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 280, "deck": "280 : Constipation chez l’enfant et l’adulte (avec le traent)", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 281, "deck": "281 : Colopathie fonctionnelle", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 282, "deck": "282 : Diarrhée chronique chez l’adulte et l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 283, "deck": "283 : Diarrhée aiguë et déshydratation chez le nourrisson, l’enfant et l’adulte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 284, "deck": "284 : Diverticulose colique et diverticulite aiguë du sigmoïde", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 285, "deck": "285 : Pathologie hémorroïdaire", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 286, "deck": "286 : Hernie pariétale chez l’enfant et l’adulte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 287, "deck": "287 : Épidémiologie, facteurs de risque, prévention et dépistage des cancers", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 288, "deck": "288 : Cancer : cancérogénèse, oncogénétique", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 289, "deck": "289 : Diagnostic des cancers, stadification, pronostic", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 290, "deck": "290 : Le médecin préleveur de cellules et/ou de tissus pour des examens d’Anatomie et Cytologie Pathologiques", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 291, "deck": "291 : Traent des cancers : chirurgie, radiothérapie, traents médicaux des cancers", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 292, "deck": "292 : Prise en charge et accompagnement d’un malade cancéreux à tous les stades de la maladie dont le stade de soins palliatifs", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 293, "deck": "293 : Agranulocytose médicamenteuse : conduite à tenir", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 294, "deck": "294 : Cancer de l’enfant : particularités épidémiologiques, diagnostiques et thérapeutiques", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 295, "deck": "295 : Tumeurs de la cavité buccale, naso-sinusiennes et du cavum, et des voies aérodigestives supérieures", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 296, "deck": "296 : Tumeurs intracrâniennes", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 297, "deck": "297 : Tumeurs du col utérin, tumeur du corps utérin", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 298, "deck": "298 : Tumeurs du colon et du rectum", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 299, "deck": "299 : Tumeurs cutanées, épithéliales et mélaniques", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 300, "deck": "300 : Tumeurs de l’estomac", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 301, "deck": "301 : Tumeurs du foie, primitives et secondaires", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 302, "deck": "302 : Tumeurs de l’œsophage", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 303, "deck": "303 : Tumeurs de l’ovaire", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 304, "deck": "304 : Tumeurs des os primitives et secondaires", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 305, "deck": "305 : Tumeurs du pancréas", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 306, "deck": "306 : Tumeurs du poumon, primitives et secondaires", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 307, "deck": "307 : Tumeurs de la prostate", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 308, "deck": "308 : Tumeurs du rein", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 309, "deck": "309 : Tumeurs du sein", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 310, "deck": "310 : Tumeurs du testicule", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 311, "deck": "311 : Tumeurs vésicales", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 312, "deck": "312 : Leucémies aiguës", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 313, "deck": "313 : Syndromes myélodysplasiques", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 314, "deck": "314 : Syndromes myéloprolifératifs", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 315, "deck": "315 : Leucémies lymphoïdes chroniques", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 316, "deck": "316 : Lymphomes malins", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 317, "deck": "317 : Myélome multiple des os", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 318, "deck": "318 : Principe du bon usage du médicament et des thérapeutiques non médicamenteuses", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 319, "deck": "319 : La décision thérapeutique personnalisée : bon usage dans des situations à risque", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 320, "deck": "320 : Analyser et utiliser les résultats des études cliniques dans la perspective du bon usage", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 321, "deck": "321 : Éducation thérapeutique, observance et automédication", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 322, "deck": "322 : Identification et gestion des risques liés aux médicaments et aux biomatériaux, risque iatrogène, erreur médicamenteuse", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 323, "deck": "323 : Cadre réglementaire de la prescription thérapeutique et recommandations pour le bon usage", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 324, "deck": "324 : Thérapeutiques non médicamenteuses et dispositifs médicaux", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 325, "deck": "325 : Transfusion sanguine et produits dérivés du sang : indications, complications. Hémovigilance", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 326, "deck": "326 : Prescription et surveillance des classes de médicaments les plus courantes chez l’adulte et chez l’enfant.", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 327, "deck": "327 : Arrêt cardio-circulatoire", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 328, "deck": "328 : État de choc (hypovolémique, septique, cardiogénique, anaphylactique)", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 329, "deck": "329 : Prise en charge immédiate pré-hospitalière et à l’arrivée à l’hôpital, évaluation des complications du brûlé et du polytraumatisé", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 330, "deck": "330 : Orientation diagnostique et conduite à tenir devant un traumatisme cranio-facial", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 331, "deck": "331 : Coma non traumatique chez l’adulte et chez l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 332, "deck": "332 : Principales intoxications aiguës", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 333, "deck": "333 : Œdème de Quincke et anaphylaxie", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 334, "deck": "334 : Syndromes coronariens aigus", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 335, "deck": "335 : Accidents vasculaires cérébraux", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 336, "deck": "336 : Hémorragie méningée", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 337, "deck": "337 : Malaise, perte de connaissance, crise comitiale chez l’adulte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 338, "deck": "338 : État confusionnel et trouble de conscience chez l’adulte et chez l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 339, "deck": "339 : Prise en charge d’une patiente atteinte de pré-éclampsie", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 340, "deck": "340 : Malaise grave du nourrisson et mort subite", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 341, "deck": "341 : Convulsions chez le nourrisson et chez l’enfant", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 342, "deck": "342 : Rétention aiguë d’urine", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 343, "deck": "343 : Insuffisance rénale aiguë – Anurie", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 344, "deck": "344 : Infection aiguë des parties molles (abcès, panaris, phlegmon des gaines)", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 345, "deck": "345 : Grosse jambe rouge aiguë", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 346, "deck": "346 : Agitation et délire aiguë", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 347, "deck": "347 : Crise d’angoisse aiguë et attaque de panique", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 348, "deck": "348 : Risque et conduite suicidaires", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 349, "deck": "349 : Syndrome occlusif de l’enfant et de l’adulte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 350, "deck": "350 : Hémorragie digestive", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 351, "deck": "351 : Appendicite de l’enfant et de l’adulte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 352, "deck": "352 : Péritonite aiguë chez l’enfant et chez l’adulte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 353, "deck": "353 : Pancréatite aiguë", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 354, "deck": "354 : Détresse respiratoire aigüe du nourrisson, de l’enfant et de l’adulte", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 355, "deck": "355 : Insuffisance respiratoire aiguë", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 356, "deck": "356 : Pneumothorax", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 357, "deck": "357 : Lésions péri-articulaires et ligamentaires du genou, de la cheville et de l’épaule", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 358, "deck": "358 : Prothèses et ostéosynthèses", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 359, "deck": "359 : Fractures fréquentes de l’adulte et du sujet âgé", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 360, "deck": "360 : Fractures chez l’enfant : particularités épidémiologiques, diagnostiques et thérapeutiques", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 361, "deck": "361 : Surveillance d’un malade sous plâtre, diagnostiquer une complication", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" },
-  { "id": 362, "deck": "362 : Exposition accidentelle aux liquides biologiques : conduite à tenir", "recto": "Question initiale...", "verso": "Réponse initiale...", "interval": 1, "easeFactor": 2.5, "nextReview": "2024-01-01T00:00:00.000Z" }
+  {
+    "id": 1,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "deck": "2 : Les valeurs professionnelles",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 3,
+    "deck": "3 : Le raisonnement et la décision en médecine",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 4,
+    "deck": "4 : La sécurité du patient et la gestion des risques",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 5,
+    "deck": "5 : La gestion des erreurs et des plaintes ; l’aléa thérapeutique",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 6,
+    "deck": "6 : L’organisation de l’exercice clinique et sécurité des patients",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 7,
+    "deck": "7 : Les droits individuels et collectifs du patient",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 8,
+    "deck": "8 : Éthique médicale",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 9,
+    "deck": "9 : Certificats médicaux. Décès et législation. Prélèvements d’organes et législation",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 10,
+    "deck": "10 : Violences sexuelles",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 11,
+    "deck": "11 : Soins psychiatriques sans consentement",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 12,
+    "deck": "12 : Responsabilités médicale pénale, civile, administrative et disciplinaire",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 13,
+    "deck": "13 : Principes d’une démarche qualité et évaluation des pratiques professionnelles",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 14,
+    "deck": "14 : Formation tout au long de la vie",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 15,
+    "deck": "15 : Organisation du système de soins",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 16,
+    "deck": "16 : La sécurité sociale",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 17,
+    "deck": "17 : Le système conventionnel",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 18,
+    "deck": "18 : Méthodologie de la recherche expérimentale et clinique",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 19,
+    "deck": "19 : Mesure de l’état de santé de la population",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 20,
+    "deck": "20 : Interprétation d’une enquête épidémiologique",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 21,
+    "deck": "21 : Examen prénuptial",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 22,
+    "deck": "22 : Grossesse normale",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 23,
+    "deck": "23 : Principales complications de la grossesse",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 24,
+    "deck": "24 : Grossesse extra-utérine",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 25,
+    "deck": "25 : Douleur abdominale aiguë chez une femme enceinte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 26,
+    "deck": "26 : Risques fœtaux : infection, médicaments, toxiques, irradiation",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 27,
+    "deck": "27 : Infection urinaire au cours de la grossesse",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 28,
+    "deck": "28 : Risques professionnels pour la maternité, liés au travail de la mère.",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 29,
+    "deck": "29 : Prématurité et retard de croissance intra-utérin : facteurs de risque et prévention",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 30,
+    "deck": "30 : Accouchement, délivrance et suites de couches normales",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 31,
+    "deck": "31 : Évaluation et soins du nouveau-né à terme",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 32,
+    "deck": "32 : Allaent maternel",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 33,
+    "deck": "33 : Suites de couches pathologiques",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 34,
+    "deck": "34 : Anomalies du cycle menstruel. Métrorragies",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 35,
+    "deck": "35 : Contraception",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 36,
+    "deck": "36 : Interruption volontaire de grossesse",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 37,
+    "deck": "37 : Stérilité du couple : conduite de la première consultation",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 38,
+    "deck": "38 : Assistance médicale à la procréation (AMP)",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 39,
+    "deck": "39 : Algies pelviennes chez la femme",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 40,
+    "deck": "40 : Aménorrhée",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 41,
+    "deck": "41 : Hémorragie génitale chez la femme",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 42,
+    "deck": "42 : Tuméfaction pelvienne chez la femme",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 43,
+    "deck": "43 : Problèmes posés par les maladies génétiques, à propos",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 44,
+    "deck": "44 : Suivi d’un nourrisson, d’un enfant et d’un adolescent normal",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 45,
+    "deck": "45 : Alimentation et besoins nutritionnels du nourrisson et de l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 46,
+    "deck": "46 : Développement buccodentaire et anomalies",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 47,
+    "deck": "47 : Puberté normale et pathologique",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 48,
+    "deck": "48 : Pathologie génito-scrotale chez le garçon et chez l’homme",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 49,
+    "deck": "49 : Troubles de la miction chez l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 50,
+    "deck": "50 : Strabisme de l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 51,
+    "deck": "51 : Retard de croissance staturo-pondérale",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 52,
+    "deck": "52 : Boiterie chez l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 53,
+    "deck": "53 : Développement psychomoteur du nourrisson et de l’enfant, troubles de l’apprentissage",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 54,
+    "deck": "54 : L’enfant handicapé : orientation et prise en charge",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 55,
+    "deck": "55 : Maltraitance et enfants en danger. Protection maternelle et infantile",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 56,
+    "deck": "56 : Sexualité normale et ses troubles",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 57,
+    "deck": "57 : Sujets en situation de précarité",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 58,
+    "deck": "58 : Facteurs de risque, prévention, dépistage des troubles psychiques",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 59,
+    "deck": "59 : Classifications des troubles mentaux",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 60,
+    "deck": "60 : Organisation de l’offre de soins en psychiatrie, de l’enfant à la personne âgée",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 61,
+    "deck": "61 : Trouble schizophrénique de l’adolescent et de l’adulte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 62,
+    "deck": "62 : Trouble bipolaire de l’adolescent et de l’adulte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 63,
+    "deck": "63 : Trouble délirant persistant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 64,
+    "deck": "64 : Trouble dépressif, trouble anxieux généralisé, trouble panique, trouble phobique, trouble obsessionnel compulsif, état de stress post-traumatique, trouble de l’adaptation, trouble de la personnalité.",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 65,
+    "deck": "65 : Troubles envahissants du développement",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 66,
+    "deck": "66 : Troubles du comportement de l’adolescent",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 67,
+    "deck": "67 : Troubles psychiques de la grossesse et du post-partum",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 68,
+    "deck": "68 : Troubles psychiques du sujet âgé",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 69,
+    "deck": "69 : Troubles des conduites alimentaires chez l’adolescent et l’adulte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 70,
+    "deck": "70 : Troubles somatoformes à tous les âges",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 71,
+    "deck": "71 : Différents types de techniques psychothérapeutiques",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 72,
+    "deck": "72 : Prescription et surveillance des psychotropes",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 73,
+    "deck": "73 : Addiction au tabac",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 74,
+    "deck": "74 : Addiction à l’alcool",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 75,
+    "deck": "75 : Addiction aux médicaments psychotropes (benzodiazépines et apparentés)",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 76,
+    "deck": "76 : Addiction au cannabis, cocaïne, amphétamines, opiacés, drogues de synthèse",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 77,
+    "deck": "77 : Addictions comportementales",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 78,
+    "deck": "78 : Dopage",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 79,
+    "deck": "79 : Altération de la fonction visuelle",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 80,
+    "deck": "80 : Anomalie de la vision d’apparition brutale",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 81,
+    "deck": "81 : Œil rouge et/ou douloureux",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 82,
+    "deck": "82 : Glaucome chronique",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 83,
+    "deck": "83 : Troubles de la réfraction",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 84,
+    "deck": "84 : Pathologie des paupières",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 85,
+    "deck": "85 : Épistaxis",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 86,
+    "deck": "86 : Trouble aigu de la parole. Dysphonie",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 87,
+    "deck": "87 : Altération de la fonction auditive",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 88,
+    "deck": "88 : Pathologie des glandes salivaires",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 89,
+    "deck": "89 : Déficit neurologique récent",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 90,
+    "deck": "90 : Déficit moteur et/ou sensitif des membres",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 91,
+    "deck": "91 : Compression médullaire non traumatique et syndrome de la queue de cheval",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 6,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-26T18:50:26.056Z"
+  },
+  {
+    "id": 92,
+    "deck": "92 : Rachialgie",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 93,
+    "deck": "93 : Radiculalgie et syndrome canalaire",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 94,
+    "deck": "94 : Neuropathies périphériques",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 95,
+    "deck": "95 : Polyradiculonévrite aiguë inflammatoire (syndrome de Guillain-Barré)",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 96,
+    "deck": "96 : Myasthénie",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 97,
+    "deck": "97 : Migraine, névralgie du trijumeau et algies de la face",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 98,
+    "deck": "98 : Céphalée aiguë et chronique chez l’adulte et l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 99,
+    "deck": "99 : Paralysie faciale",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 100,
+    "deck": "100 : Diplopie",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 101,
+    "deck": "101 : Vertige",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 102,
+    "deck": "102 : Sclérose en plaques",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 103,
+    "deck": "103 : Épilepsie de l’enfant et de l’adulte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 104,
+    "deck": "104 : Maladie de Parkinson",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 105,
+    "deck": "105 : Mouvements anormaux",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 106,
+    "deck": "106 : Confusion, démences",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 107,
+    "deck": "107 : Troubles de la marche et de l’équilibre",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 108,
+    "deck": "108 : Troubles du sommeil de l’enfant et de l’adulte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 109,
+    "deck": "109 : Dermatoses faciales : acné, rosacée, dermatite séborrhéique",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 110,
+    "deck": "110 : Dermatose bulleuse touchant la peau et/ou les muqueuses externes",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 111,
+    "deck": "111 : Hémangiomes et malformations vasculaires cutanées",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 112,
+    "deck": "112 : Exanthème et érythrodermie de l’adulte et de l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 113,
+    "deck": "113 : Prurit",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 114,
+    "deck": "114 : Psoriasis",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 115,
+    "deck": "115 : Vieillissement normal (1)",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 116,
+    "deck": "116 : Complications de l’immobilité et du décubitus. Prévention et prise en charge",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 117,
+    "deck": "117 : Le handicap psychique",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 118,
+    "deck": "118 : Principales techniques de rééducation et de réadaptation",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 119,
+    "deck": "119 : Vieillissement normal (2)",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 120,
+    "deck": "120 : Ménopause et andropause",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 121,
+    "deck": "121 : Troubles de la miction et incontinence urinaire de l’adulte et du sujet âgé",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 122,
+    "deck": "122 : Trouble de l’érection",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 123,
+    "deck": "123 : Hypertrophie bénigne de la prostate",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 124,
+    "deck": "124 : Ostéopathies fragilisantes",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 125,
+    "deck": "125 : Arthrose",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 126,
+    "deck": "126 : La personne âgée malade",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 127,
+    "deck": "127 : Déficit neurosensoriel chez le sujet âgé",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 128,
+    "deck": "128 : Troubles de la marche et de l’équilibre",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 129,
+    "deck": "129 : Troubles cognitifs du sujet âgé",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 130,
+    "deck": "130 : Autonomie et dépendance chez le sujet âgé",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 131,
+    "deck": "131 : Bases neurophysiologiques, mécanismes physiopathologiques d’une douleur aiguë et d’une douleur chronique",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 132,
+    "deck": "132 : Thérapeutiques antalgiques, médicamenteuses et non médicamenteuses",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 133,
+    "deck": "133 : Anesthésie locale, locorégionale et générale’",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 134,
+    "deck": "134 : Douleur chez l’enfant : évaluation et traents antalgiques",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 135,
+    "deck": "135 : Douleur en santé mentale",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 136,
+    "deck": "136 : Soins palliatifs pluridisciplinaires chez un malade en phase palliative ou terminale d’une maladie grave, chronique ou létale (1). Principaux repères cliniques. Modalités d’organisation des équipes, en établissement de santé et en et en ambulatoire",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 137,
+    "deck": "137 : Soins palliatifs pluridisciplinaires chez un malade en phase palliative ou terminale d’une maladie grave, chronique ou létale (2). Accompagnement de la personne malade et de son entourage. Principaux repères éthiques.",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 138,
+    "deck": "138 : Soins palliatifs pluridisciplinaires chez un malade en phase palliative ou terminale d’une maladie grave, chronique ou létale (3). La sédation pour détresse en phase terminale et dans des situations spécifiques et complexes en fin de vie. Réponse à la demande d’euthanasie ou de suicide assisté.",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 139,
+    "deck": "139 : Connaître les aspects spécifiques des soins palliatifs en pédiatrie",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 140,
+    "deck": "140 : Connaître les aspects spécifiques des soins palliatifs en réanimation",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 141,
+    "deck": "141 : Deuil normal et pathologique",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 142,
+    "deck": "142 : Surveillance des maladies infectieuses transmissibles",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 143,
+    "deck": "143 : Vaccinations",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 144,
+    "deck": "144 : Fièvre aiguë chez l’enfant et l’adulte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 145,
+    "deck": "145 : Infections naso-sinusiennes de l’adulte et de l’enfan",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 146,
+    "deck": "146 : Angines de l’adulte et de l’enfant et rhinopharyngites de l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 147,
+    "deck": "147 : Otites infectieuses de l’adulte et de l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 148,
+    "deck": "148 : Méningites, méningoencéphalites chez l’adulte et l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 149,
+    "deck": "149 : Endocardite infectieuse",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 150,
+    "deck": "150 : Surveillance des porteurs de valve et prothèses vasculaires",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 151,
+    "deck": "151 : Infections broncho pulmonaires communautaires de l’adulte et de l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 152,
+    "deck": "152 : Infections cutanéo-muqueuses et des phanères, bactériennes et mycosiques",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 153,
+    "deck": "153 : Infections ostéo articulaires (IOA) de l’enfant et de l’adulte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 154,
+    "deck": "154 : Septicémie / Bactériémie / Fongémie de l’adulte et de l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 155,
+    "deck": "155 : Tuberculose de l’adulte et de l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 156,
+    "deck": "156 : Tétanos",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 157,
+    "deck": "157 : Infections urinaires de l’enfant et de l’adulte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 158,
+    "deck": "158 : Infections sexuellement transmissibles (IST) : gonococcies, chlamydioses, syphilis, papillomavirus humain (HPV), trichomonose",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 159,
+    "deck": "159 : Coqueluche",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 160,
+    "deck": "160 : Exanthèmes fébriles de l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 161,
+    "deck": "161 : Oreillons",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 162,
+    "deck": "162 : Grippe",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 163,
+    "deck": "163 : Hépatites virales",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 164,
+    "deck": "164 : Infections à herpès virus du sujet immunocompétent",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 165,
+    "deck": "165 : Infections à VIH",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 166,
+    "deck": "166 : Paludisme",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 167,
+    "deck": "167 : Gale et pédiculose",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 168,
+    "deck": "168 : Parasitoses digestives : giardiose, amoebose, téniasis, ascaridiose, oxyurose",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 169,
+    "deck": "169 : Zoonoses",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 170,
+    "deck": "170 : Pathologie infectieuse chez les migrants adultes et enfants",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 171,
+    "deck": "171 : Voyage en pays tropical de l’adulte et de l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 172,
+    "deck": "172 : Diarrhées infectieuses de l’adulte et de l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 173,
+    "deck": "173 : Prescription et surveillance des anti-infectieux chez l’adulte et l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 174,
+    "deck": "174 : Risques émergents, bioterrorisme, maladies hautement transmissibles",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 175,
+    "deck": "175 : Risques sanitaires liés à l’eau et à l’alimentation. Toxi-infections alimentaires",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 176,
+    "deck": "176 : Risques sanitaires liés aux irradiations. Radioprotection",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 177,
+    "deck": "177 : La sécurité sanitaire des produits destinés à l’homme. La veille sanitaire",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 178,
+    "deck": "178 : Environnement professionnel et santé au travail",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 179,
+    "deck": "179 : Organisation de la médecine du travail. Prévention des risques professionnels",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 180,
+    "deck": "180 : Accidents du travail et maladies professionnelles : définitions et enjeux",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 181,
+    "deck": "181 : Réaction inflammatoire : aspects biologiques et cliniques. Conduite à tenir",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 182,
+    "deck": "182 : Hypersensibilités et allergies chez l’enfant et l’adulte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 183,
+    "deck": "183 : Hypersensibilités et allergies cutanéomuqueuses, urticaire, dermatites atopique et de contact",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 184,
+    "deck": "184 : Hypersensibilité et Allergies respiratoires : asthme, rhinite",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 185,
+    "deck": "185 : Déficit immunitaire",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 186,
+    "deck": "186 : Fièvre prolongée",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 187,
+    "deck": "187 : Fièvre chez un patient immunodéprimé",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 188,
+    "deck": "188 : Pathologies auto-immunes",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 189,
+    "deck": "189 : Vascularite systémique",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 190,
+    "deck": "190 : Lupus érythémateux disséminé. Syndrome des anti-phospholipides",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 191,
+    "deck": "191 : Artérite à cellules géantes",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 192,
+    "deck": "192 : Polyarthrite rhumatoïde",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 193,
+    "deck": "193 : Spondylarthrite inflammatoire",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 194,
+    "deck": "194 : Arthropathie microcristalline",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 195,
+    "deck": "195 : Syndrome douloureux régional complexe (ex algodystrophie)",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 196,
+    "deck": "196 : Douleur et épanchement articulaire. Arthrite d’évolution récente",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 197,
+    "deck": "197 : Transplantation d’organes",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 198,
+    "deck": "198 : Biothérapies et thérapies ciblées",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 199,
+    "deck": "199 : Dyspnée aiguë et chronique",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 200,
+    "deck": "200 : Toux chez l’enfant et chez l’adulte (avec le traent)",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 201,
+    "deck": "201 : Hémoptysie",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 202,
+    "deck": "202 : Épanchement pleural",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 203,
+    "deck": "203 : Opacités et masses intra-thoraciques chez l’enfant et chez l’adulte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 204,
+    "deck": "204 : Insuffisance respiratoire chronique",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 205,
+    "deck": "205 : Bronchopneumopathie chronique obstructive chez l’adulte et l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 206,
+    "deck": "206 : Pneumopathie interstitielle diffuse",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 207,
+    "deck": "207 : Sarcoïdose",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 208,
+    "deck": "208 : Hémogramme chez l’adulte et l’enfant : indications et interprétation",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 209,
+    "deck": "209 : Anémie chez l’adulte et l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 210,
+    "deck": "210 : Thrombopénie chez l’adulte et l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 211,
+    "deck": "211 : Purpuras chez l’adulte et l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 212,
+    "deck": "212 : Syndrome hémorragique d’origine hématologique",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 213,
+    "deck": "213 : Syndrome mononucléosique",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 214,
+    "deck": "214 : Éosinophilie",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 215,
+    "deck": "215 : Pathologie du fer chez l’adulte et l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 216,
+    "deck": "216 : Adénopathie superficielle de l’adulte et de l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 217,
+    "deck": "217 : Amylose",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 218,
+    "deck": "218 : Athérome",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 219,
+    "deck": "219 : Facteurs de risque cardio-vasculaire et prévention",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 220,
+    "deck": "220 : Dyslipidémies",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 221,
+    "deck": "221 : Hypertension artérielle de l’adulte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 222,
+    "deck": "222 : Hypertension artérielle pulmonaire de l’enfant et de l’adulte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 223,
+    "deck": "223 : Artériopathie oblitérante de l’aorte, des artères viscérales et des membres inférieurs ; anévrysmes",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 224,
+    "deck": "224 : Thrombose veineuse profonde et embolie pulmonaire",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 225,
+    "deck": "225 : Insuffisance veineuse chronique. Varices",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 226,
+    "deck": "226 : Ulcère de jambe",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 227,
+    "deck": "227 : Surveillance et complications des abords veineux",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 228,
+    "deck": "228 : Douleur thoracique aiguë et chronique",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 229,
+    "deck": "229 : Électrocardiogramme : indications et interprétations",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 230,
+    "deck": "230 : Fibrillation atriale",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 231,
+    "deck": "231 : Valvulopathies",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 232,
+    "deck": "232 : Insuffisance cardiaque de l’adulte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 233,
+    "deck": "233 : Péricardite aiguë et tamponnade",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 234,
+    "deck": "234 : Troubles de la conduction intracardiaque",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 235,
+    "deck": "235 : Palpitations",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 236,
+    "deck": "236 : Souffle cardiaque chez l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 237,
+    "deck": "237 : Acrosyndromes (phénomène de Raynaud, érythermalgie, acrocyanose, engelures, ischémie digitale)",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 238,
+    "deck": "238 : Hypoglycémie chez l’adulte et l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 239,
+    "deck": "239 : Goitre, nodules thyroïdiens et cancers thyroïdiens",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 240,
+    "deck": "240 : Hyperthyroïdie",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 241,
+    "deck": "241 : Hypothyroïdie",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 242,
+    "deck": "242 : Adénome hypophysaire",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 243,
+    "deck": "243 : Insuffisance surrénale chez l’adulte et l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 244,
+    "deck": "244 : Gynécomastie",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 245,
+    "deck": "245 : Diabète sucré de types 1 et 2 de l’enfant et de l’adulte. Complications",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 246,
+    "deck": "246 : Prévention primaire par la nutrition chez l’adulte et l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 247,
+    "deck": "247 : Modifications thérapeutiques du mode de vie (alimentation et activité physique)",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 248,
+    "deck": "248 : Dénutrition chez l’adulte et l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 249,
+    "deck": "249 : Amaigrissement à tous les âges",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 250,
+    "deck": "250 : Troubles nutritionnels chez le sujet âgé",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 251,
+    "deck": "251 : Obésité de l’enfant et de l’adulte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 252,
+    "deck": "252 : Nutrition et grossesse",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 253,
+    "deck": "253 : Aptitude au sport chez l’adulte et l’enfant ; besoins nutritionnels chez le sportif",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 254,
+    "deck": "254 : Œdèmes des membres inférieurs localisés ou généralisés",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 255,
+    "deck": "255 : Élévation de la créatininémie",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 256,
+    "deck": "256 : Protéinurie et syndrome néphrotique de chez l’l’adulte et de l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 257,
+    "deck": "257 : Hématurie",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 258,
+    "deck": "258 : Néphropathie glomérulaire",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 259,
+    "deck": "259 : Néphropathie interstitielle",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 260,
+    "deck": "260 : Néphropathie vasculaire",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 261,
+    "deck": "261 : Insuffisance rénale chronique chez l’adulte et l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 262,
+    "deck": "262 : Lithiase urinaire",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 263,
+    "deck": "263 : Polykystose rénale",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 264,
+    "deck": "264 : Prescription et surveillance des diurétiques",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 265,
+    "deck": "265 : Troubles de l’équilibre acido-basique et désordres hydro-électrolytiques",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 266,
+    "deck": "266 : Hypercalcémie",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 267,
+    "deck": "267 : Douleurs abdominales et lombaires aiguës chez l’enfant et chez l’adulte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 268,
+    "deck": "268 : Reflux gastro-œsophagien, hernie hiatale",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 269,
+    "deck": "269 : Ulcère gastrique et duodénal. Gastrite",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 270,
+    "deck": "270 : Dysphagie",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 271,
+    "deck": "271 : Vomissements du nourrisson, de l’enfant et de l’adulte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 272,
+    "deck": "272 : Splénomégalie",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 273,
+    "deck": "273 : Hépatomégalie et masse abdominale",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 274,
+    "deck": "274 : Lithiase biliaire et complications",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 275,
+    "deck": "275 : Ictère",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 276,
+    "deck": "276 : Cirrhose et complications",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 277,
+    "deck": "277 : Ascite",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 278,
+    "deck": "278 : Pancréatite chronique",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 279,
+    "deck": "279 : Maladies Inflammatoires Chroniques de l’Intestin (MICI) chez l’adulte et l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 280,
+    "deck": "280 : Constipation chez l’enfant et l’adulte (avec le traent)",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 281,
+    "deck": "281 : Colopathie fonctionnelle",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 282,
+    "deck": "282 : Diarrhée chronique chez l’adulte et l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 283,
+    "deck": "283 : Diarrhée aiguë et déshydratation chez le nourrisson, l’enfant et l’adulte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 284,
+    "deck": "284 : Diverticulose colique et diverticulite aiguë du sigmoïde",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 285,
+    "deck": "285 : Pathologie hémorroïdaire",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 286,
+    "deck": "286 : Hernie pariétale chez l’enfant et l’adulte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 287,
+    "deck": "287 : Épidémiologie, facteurs de risque, prévention et dépistage des cancers",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 288,
+    "deck": "288 : Cancer : cancérogénèse, oncogénétique",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 289,
+    "deck": "289 : Diagnostic des cancers, stadification, pronostic",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 290,
+    "deck": "290 : Le médecin préleveur de cellules et/ou de tissus pour des examens d’Anatomie et Cytologie Pathologiques",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 291,
+    "deck": "291 : Traent des cancers : chirurgie, radiothérapie, traents médicaux des cancers",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 292,
+    "deck": "292 : Prise en charge et accompagnement d’un malade cancéreux à tous les stades de la maladie dont le stade de soins palliatifs",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 293,
+    "deck": "293 : Agranulocytose médicamenteuse : conduite à tenir",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 294,
+    "deck": "294 : Cancer de l’enfant : particularités épidémiologiques, diagnostiques et thérapeutiques",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 295,
+    "deck": "295 : Tumeurs de la cavité buccale, naso-sinusiennes et du cavum, et des voies aérodigestives supérieures",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 296,
+    "deck": "296 : Tumeurs intracrâniennes",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 297,
+    "deck": "297 : Tumeurs du col utérin, tumeur du corps utérin",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 298,
+    "deck": "298 : Tumeurs du colon et du rectum",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 299,
+    "deck": "299 : Tumeurs cutanées, épithéliales et mélaniques",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 300,
+    "deck": "300 : Tumeurs de l’estomac",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 301,
+    "deck": "301 : Tumeurs du foie, primitives et secondaires",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 302,
+    "deck": "302 : Tumeurs de l’œsophage",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 303,
+    "deck": "303 : Tumeurs de l’ovaire",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 304,
+    "deck": "304 : Tumeurs des os primitives et secondaires",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 305,
+    "deck": "305 : Tumeurs du pancréas",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 306,
+    "deck": "306 : Tumeurs du poumon, primitives et secondaires",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 307,
+    "deck": "307 : Tumeurs de la prostate",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 308,
+    "deck": "308 : Tumeurs du rein",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 309,
+    "deck": "309 : Tumeurs du sein",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 310,
+    "deck": "310 : Tumeurs du testicule",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 311,
+    "deck": "311 : Tumeurs vésicales",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 312,
+    "deck": "312 : Leucémies aiguës",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 313,
+    "deck": "313 : Syndromes myélodysplasiques",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 314,
+    "deck": "314 : Syndromes myéloprolifératifs",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 315,
+    "deck": "315 : Leucémies lymphoïdes chroniques",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 316,
+    "deck": "316 : Lymphomes malins",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 317,
+    "deck": "317 : Myélome multiple des os",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 318,
+    "deck": "318 : Principe du bon usage du médicament et des thérapeutiques non médicamenteuses",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 319,
+    "deck": "319 : La décision thérapeutique personnalisée : bon usage dans des situations à risque",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 320,
+    "deck": "320 : Analyser et utiliser les résultats des études cliniques dans la perspective du bon usage",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 321,
+    "deck": "321 : Éducation thérapeutique, observance et automédication",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 322,
+    "deck": "322 : Identification et gestion des risques liés aux médicaments et aux biomatériaux, risque iatrogène, erreur médicamenteuse",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 323,
+    "deck": "323 : Cadre réglementaire de la prescription thérapeutique et recommandations pour le bon usage",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 324,
+    "deck": "324 : Thérapeutiques non médicamenteuses et dispositifs médicaux",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 325,
+    "deck": "325 : Transfusion sanguine et produits dérivés du sang : indications, complications. Hémovigilance",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 326,
+    "deck": "326 : Prescription et surveillance des classes de médicaments les plus courantes chez l’adulte et chez l’enfant.",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 327,
+    "deck": "327 : Arrêt cardio-circulatoire",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 328,
+    "deck": "328 : État de choc (hypovolémique, septique, cardiogénique, anaphylactique)",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 329,
+    "deck": "329 : Prise en charge immédiate pré-hospitalière et à l’arrivée à l’hôpital, évaluation des complications du brûlé et du polytraumatisé",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 330,
+    "deck": "330 : Orientation diagnostique et conduite à tenir devant un traumatisme cranio-facial",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 331,
+    "deck": "331 : Coma non traumatique chez l’adulte et chez l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 332,
+    "deck": "332 : Principales intoxications aiguës",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 333,
+    "deck": "333 : Œdème de Quincke et anaphylaxie",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 334,
+    "deck": "334 : Syndromes coronariens aigus",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 335,
+    "deck": "335 : Accidents vasculaires cérébraux",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 336,
+    "deck": "336 : Hémorragie méningée",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 337,
+    "deck": "337 : Malaise, perte de connaissance, crise comitiale chez l’adulte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 338,
+    "deck": "338 : État confusionnel et trouble de conscience chez l’adulte et chez l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 339,
+    "deck": "339 : Prise en charge d’une patiente atteinte de pré-éclampsie",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 340,
+    "deck": "340 : Malaise grave du nourrisson et mort subite",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 341,
+    "deck": "341 : Convulsions chez le nourrisson et chez l’enfant",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 342,
+    "deck": "342 : Rétention aiguë d’urine",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 343,
+    "deck": "343 : Insuffisance rénale aiguë – Anurie",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 344,
+    "deck": "344 : Infection aiguë des parties molles (abcès, panaris, phlegmon des gaines)",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 345,
+    "deck": "345 : Grosse jambe rouge aiguë",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 346,
+    "deck": "346 : Agitation et délire aiguë",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 347,
+    "deck": "347 : Crise d’angoisse aiguë et attaque de panique",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 348,
+    "deck": "348 : Risque et conduite suicidaires",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 349,
+    "deck": "349 : Syndrome occlusif de l’enfant et de l’adulte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 350,
+    "deck": "350 : Hémorragie digestive",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 351,
+    "deck": "351 : Appendicite de l’enfant et de l’adulte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 352,
+    "deck": "352 : Péritonite aiguë chez l’enfant et chez l’adulte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 353,
+    "deck": "353 : Pancréatite aiguë",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 354,
+    "deck": "354 : Détresse respiratoire aigüe du nourrisson, de l’enfant et de l’adulte",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 355,
+    "deck": "355 : Insuffisance respiratoire aiguë",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 356,
+    "deck": "356 : Pneumothorax",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 357,
+    "deck": "357 : Lésions péri-articulaires et ligamentaires du genou, de la cheville et de l’épaule",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 358,
+    "deck": "358 : Prothèses et ostéosynthèses",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 359,
+    "deck": "359 : Fractures fréquentes de l’adulte et du sujet âgé",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 360,
+    "deck": "360 : Fractures chez l’enfant : particularités épidémiologiques, diagnostiques et thérapeutiques",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 361,
+    "deck": "361 : Surveillance d’un malade sous plâtre, diagnostiquer une complication",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 362,
+    "deck": "362 : Exposition accidentelle aux liquides biologiques : conduite à tenir",
+    "recto": "Question initiale...",
+    "verso": "Réponse initiale...",
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 1755715807812,
+    "deck": "91 : Compression médullaire non traumatique et syndrome de la queue de cheval",
+    "recto": "De quelle tumeur Sagis-t-il?",
+    "verso": "meningiome",
+    "rectoImage": "/uploads/1755715807812.png",
+    "versoImage": null,
+    "interval": 6,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-26T18:50:35.642Z"
+  }
 ]

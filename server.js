@@ -1,80 +1,89 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const multer = require('multer');
 const app = express();
 const PORT = 3000;
 
+// Configuration de Multer pour le stockage des images
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => cb(null, 'uploads/'),
+    filename: (req, file, cb) => cb(null, Date.now() + path.extname(file.originalname))
+});
+const upload = multer({ storage: storage });
+
+// Middlewares
 app.use(express.static(path.join(__dirname)));
 app.use(express.json());
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 const cardsFilePath = path.join(__dirname, 'cartes.json');
 
 // --- API ---
 
-// GET /api/cards - Obtenir toutes les cartes (inchangé)
+// Route pour téléverser une image
+app.post('/api/upload', upload.single('image'), (req, res) => {
+    if (!req.file) {
+        return res.status(400).send('Aucun fichier téléversé.');
+    }
+    res.json({ filePath: `/uploads/${req.file.filename}` });
+});
+
+// Route GET améliorée pour être plus robuste
 app.get('/api/cards', (req, res) => {
     fs.readFile(cardsFilePath, 'utf8', (err, data) => {
-        if (err) return res.status(500).send('Erreur lecture cartes.');
-        res.json(JSON.parse(data));
+        if (err) {
+            if (err.code === 'ENOENT') return res.json([]); // Si le fichier n'existe pas, renvoie un tableau vide
+            return res.status(500).send('Erreur lors de la lecture des cartes.');
+        }
+        try {
+            const cards = JSON.parse(data);
+            res.json(cards);
+        } catch (parseError) {
+            console.error("ERREUR DE PARSING JSON:", parseError);
+            res.status(500).send('Le fichier cartes.json est corrompu ou mal formé.');
+        }
     });
 });
 
-// POST /api/cards - Sauvegarder TOUTES les cartes (inchangé)
-// Utile pour la synchronisation générale et l'ajout de nouvelles cartes
+// Route POST pour sauvegarder toutes les cartes
 app.post('/api/cards', (req, res) => {
-    const newCardsData = req.body;
-    fs.writeFile(cardsFilePath, JSON.stringify(newCardsData, null, 2), 'utf8', (err) => {
-        if (err) return res.status(500).send('Erreur sauvegarde cartes.');
-        res.status(200).send('Cartes sauvegardées.');
+    fs.writeFile(cardsFilePath, JSON.stringify(req.body, null, 2), 'utf8', (err) => {
+        if (err) return res.status(500).send('Erreur lors de la sauvegarde.');
+        res.status(200).send('Sauvegardé.');
     });
 });
 
-// NOUVEAU : PUT /api/cards/:id - Mettre à jour UNE SEULE carte
+// Route PUT pour mettre à jour une seule carte
 app.put('/api/cards/:id', (req, res) => {
     const cardId = parseInt(req.params.id, 10);
-    const updatedCardData = req.body;
-
+    const updatedData = req.body;
     fs.readFile(cardsFilePath, 'utf8', (err, data) => {
-        if (err) return res.status(500).send('Erreur lecture cartes.');
-        
+        if (err) return res.status(500).send('Erreur lecture.');
         let cards = JSON.parse(data);
-        const cardIndex = cards.findIndex(c => c.id === cardId);
-
-        if (cardIndex === -1) {
-            return res.status(404).send('Carte non trouvée.');
-        }
-        
-        // On met à jour la carte en gardant ses stats de révision
-        cards[cardIndex] = { ...cards[cardIndex], ...updatedCardData };
-        
+        const i = cards.findIndex(c => c.id === cardId);
+        if (i === -1) return res.status(404).send('Non trouvé.');
+        cards[i] = { ...cards[i], ...updatedData };
         fs.writeFile(cardsFilePath, JSON.stringify(cards, null, 2), 'utf8', (err) => {
-            if (err) return res.status(500).send('Erreur sauvegarde carte.');
-            res.status(200).json(cards[cardIndex]);
+            if (err) return res.status(500).send('Erreur sauvegarde.');
+            res.status(200).json(cards[i]);
         });
     });
 });
 
-// NOUVEAU : DELETE /api/cards/:id - Supprimer UNE SEULE carte
+// Route DELETE pour supprimer une seule carte
 app.delete('/api/cards/:id', (req, res) => {
     const cardId = parseInt(req.params.id, 10);
-
     fs.readFile(cardsFilePath, 'utf8', (err, data) => {
-        if (err) return res.status(500).send('Erreur lecture cartes.');
-        
+        if (err) return res.status(500).send('Erreur lecture.');
         let cards = JSON.parse(data);
-        const filteredCards = cards.filter(c => c.id !== cardId);
-
-        if (cards.length === filteredCards.length) {
-            return res.status(404).send('Carte non trouvée.');
-        }
-
-        fs.writeFile(cardsFilePath, JSON.stringify(filteredCards, null, 2), 'utf8', (err) => {
-            if (err) return res.status(500).send('Erreur suppression carte.');
-            res.status(200).send('Carte supprimée.');
+        const filtered = cards.filter(c => c.id !== cardId);
+        fs.writeFile(cardsFilePath, JSON.stringify(filtered, null, 2), 'utf8', (err) => {
+            if (err) return res.status(500).send('Erreur suppression.');
+            res.status(200).send('Supprimé.');
         });
     });
 });
-
 
 // Démarrage du serveur
 app.listen(PORT, () => {
