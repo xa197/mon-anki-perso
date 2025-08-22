@@ -2200,9 +2200,9 @@
     "deck": "245 : Diabète sucré de types 1 et 2 de l’enfant et de l’adulte. Complications",
     "recto": "Question initiale...",
     "verso": "Réponse initiale...",
-    "interval": 1,
+    "interval": 6,
     "easeFactor": 2.5,
-    "nextReview": "2024-01-01T00:00:00.000Z"
+    "nextReview": "2025-08-28T16:56:44.586Z"
   },
   {
     "id": 246,
@@ -3267,5 +3267,170 @@
     "interval": 6,
     "easeFactor": 2.5,
     "nextReview": "2025-08-26T18:50:35.642Z"
+  },
+  {
+    "id": 1755881072630.613,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Année de fin de la pandémie de COVID-19 selon le texte.",
+    "verso": "2020",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 6,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-28T16:45:19.829Z"
+  },
+  {
+    "id": 1755881072630.0032,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Année à partir de laquelle il n'y a plus eu de virus selon le texte (information erronée).",
+    "verso": "2025",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 6,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-28T16:45:24.583Z"
+  },
+  {
+    "id": 1755881072630.78,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Année de la dernière épidémie de choléra mentionnée.",
+    "verso": "1964",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 6,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-28T16:45:13.253Z"
+  },
+  {
+    "id": 1755881072630.9097,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Type d'infection le plus fréquent selon le texte.",
+    "verso": "Infections nosocomiales",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 6,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-28T16:46:43.906Z"
+  },
+  {
+    "id": 1755881072630.5608,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Virus considéré comme le pire selon le texte.",
+    "verso": "Zika",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 6,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-28T16:45:16.415Z"
+  },
+  {
+    "id": 1755881529873.166,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Quand a pris fin l'épidémie de COVID-19 selon le texte ?",
+    "verso": "2020",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 6,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-28T16:56:51.632Z"
+  },
+  {
+    "id": 1755881529873.7717,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Y a-t-il eu des cas de virus après 2025 selon le texte ?",
+    "verso": "Non",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 6,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-28T16:57:01.976Z"
+  },
+  {
+    "id": 1755881529873.6738,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Quelle année marque la dernière épidémie de choléra mentionnée ?",
+    "verso": "1964",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 6,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-28T16:52:15.068Z"
+  },
+  {
+    "id": 1755881529873.0564,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Quel type d'infection est le plus fréquent selon le texte ?",
+    "verso": "Les infections nosocomiales",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 6,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-28T16:56:59.683Z"
+  },
+  {
+    "id": 1755881529873.7178,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Quel virus est considéré comme le 'pire' selon le texte ?",
+    "verso": "Le virus Zika",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 6,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-28T16:52:17.324Z"
+  },
+  {
+    "id": 1755881798819.6338,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Quelle année marque la fin de la pandémie de COVID-19 selon le texte ?",
+    "verso": "2020",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 6,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-28T16:56:56.054Z"
+  },
+  {
+    "id": 1755881798819.464,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Selon le texte, y a-t-il eu des nouveaux virus depuis 2025 ?",
+    "verso": "Non",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 6,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-28T16:56:53.818Z"
+  },
+  {
+    "id": 1755881798819.9695,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Quelle année est mentionnée comme étant la dernière apparition du choléra selon le texte ?",
+    "verso": "1964",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 6,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-28T16:57:04.741Z"
+  },
+  {
+    "id": 1755881798819.4175,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Quel type d'infections est décrit comme le plus fréquent ?",
+    "verso": "Les infections nosocomiales",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 6,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-28T16:56:57.774Z"
+  },
+  {
+    "id": 1755881798819.9172,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Quel virus est désigné comme le 'pire' selon le texte ?",
+    "verso": "Le virus Zika",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 6,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-28T16:56:49.396Z"
   }
 ]
