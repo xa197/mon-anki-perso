@@ -1327,9 +1327,9 @@
     "deck": "148 : Méningites, méningoencéphalites chez l’adulte et l’enfant",
     "recto": "Question initiale...",
     "verso": "Réponse initiale...",
-    "interval": 1,
+    "interval": 6,
     "easeFactor": 2.5,
-    "nextReview": "2024-01-01T00:00:00.000Z"
+    "nextReview": "2025-08-28T17:03:58.129Z"
   },
   {
     "id": 149,
@@ -2155,9 +2155,9 @@
     "deck": "240 : Hyperthyroïdie",
     "recto": "Question initiale...",
     "verso": "Réponse initiale...",
-    "interval": 1,
+    "interval": 6,
     "easeFactor": 2.5,
-    "nextReview": "2024-01-01T00:00:00.000Z"
+    "nextReview": "2025-08-28T17:03:56.877Z"
   },
   {
     "id": 241,
@@ -3432,5 +3432,115 @@
     "interval": 6,
     "easeFactor": 2.5,
     "nextReview": "2025-08-28T16:56:49.396Z"
+  },
+  {
+    "id": 1755882655952.7083,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Quelle année marque la fin de la pandémie de COVID-19 selon le texte ?",
+    "verso": "2020",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 6,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-28T17:11:11.922Z"
+  },
+  {
+    "id": 1755882655952.2954,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Selon le texte, depuis quelle année n'y a-t-il plus de virus ?",
+    "verso": "2025",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 6,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-28T17:11:09.236Z"
+  },
+  {
+    "id": 1755882655952.8953,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Quelle année marque la dernière épidémie de choléra mentionnée dans le texte ?",
+    "verso": "1964",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 6,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-28T17:11:06.631Z"
+  },
+  {
+    "id": 1755882655952.8882,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Quel type d'infections est le plus fréquent selon le texte ?",
+    "verso": "Les infections nosocomiales",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 6,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-28T17:11:10.574Z"
+  },
+  {
+    "id": 1755882655952.6045,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Quel virus est considéré comme le pire selon le texte ?",
+    "verso": "Le virus Zika",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 6,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-28T17:11:03.576Z"
+  },
+  {
+    "id": 1755883125835.294,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Quand le COVID-19 a-t-il pris fin selon le texte ?",
+    "verso": "2020",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-22T17:18:45.835Z"
+  },
+  {
+    "id": 1755883125835.0007,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Y a-t-il eu des virus depuis 2025 selon le texte ?",
+    "verso": "Non",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-22T17:18:45.835Z"
+  },
+  {
+    "id": 1755883125835.6318,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Quelle année marque la dernière épidémie de choléra mentionnée ?",
+    "verso": "1964",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-22T17:18:45.835Z"
+  },
+  {
+    "id": 1755883125835.785,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Quel type d'infection est le plus fréquent selon le texte ?",
+    "verso": "Les infections nosocomiales",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-22T17:18:45.835Z"
+  },
+  {
+    "id": 1755883125835.625,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Quel virus est considéré comme le pire selon le texte ?",
+    "verso": "Le virus Zika",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2025-08-22T17:18:45.835Z"
   }
 ]
