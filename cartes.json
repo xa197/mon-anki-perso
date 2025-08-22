@@ -4,9 +4,9 @@
     "deck": "1 : La relation médecin-malade",
     "recto": "Question initiale...",
     "verso": "Réponse initiale...",
-    "interval": 1,
-    "easeFactor": 2.5,
-    "nextReview": "2024-01-01T00:00:00.000Z"
+    "interval": 6,
+    "easeFactor": 2.6,
+    "nextReview": "2025-08-28T16:26:19.553Z"
   },
   {
     "id": 2,
