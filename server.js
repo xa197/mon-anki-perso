@@ -39,10 +39,9 @@ app.post('/api/generate-questions', async (req, res) => {
     if (!text) { return res.status(400).json({ error: "Le texte est manquant." }); }
     try {
         const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest", safetySettings });
-        const prompt = `**Instruction :** Tu es un assistant expert en création de matériel pédagogique...`; // Votre prompt complet ici
+        const prompt = `**Instruction :** Tu es un assistant expert...`; // Votre prompt complet ici
         const result = await model.generateContent(prompt);
-        const response = result.response;
-        let jsonString = response.text();
+        let jsonString = result.response.text();
         if (jsonString.startsWith('```json')) { jsonString = jsonString.substring(7, jsonString.length - 3).trim(); }
         else if (jsonString.startsWith('```')) { jsonString = jsonString.substring(3, jsonString.length - 3).trim(); }
         const jsonStart = jsonString.indexOf('{');
@@ -52,8 +51,7 @@ app.post('/api/generate-questions', async (req, res) => {
         const data = JSON.parse(jsonString);
         res.status(200).json(data);
     } catch (error) {
-        console.error("Erreur Gemini (génération de questions):", error.message);
-        res.status(500).json({ error: "Une erreur est survenue lors de la communication avec l'IA." });
+        res.status(500).json({ error: "Une erreur est survenue." });
     }
 });
 
