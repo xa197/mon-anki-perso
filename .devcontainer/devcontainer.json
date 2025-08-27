@@ -1,0 +1,4 @@
+{
+  "name": "Mon Anki Perso Codespace",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:18"
+}
