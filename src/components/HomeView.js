@@ -1,14 +1,9 @@
 import React from 'react';
 
-// { navigateTo } est une "prop". C'est une fonction que le parent (App.js) va nous donner.
 function HomeView({ navigateTo }) {
-
-  // Pour l'instant, la logique de l'atelier se fera plus tard.
-  // Concentrons-nous sur l'affichage et la navigation.
-  
   return (
     <div id="home-view">
-        <div className="home-container"> {/* Rappel : class -> className en JSX */}
+        <div className="home-container">
             <h1>Mon Anki Perso</h1>
             <div className="home-actions">
                 <button onClick={() => navigateTo('review')} className="home-btn">Réviser les cartes</button>
