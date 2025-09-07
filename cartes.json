@@ -3542,5 +3542,60 @@
     "interval": 1,
     "easeFactor": 2.5,
     "nextReview": "2025-08-22T17:18:45.835Z"
+  },
+  {
+    "id": 1757254033925.7546,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Année de fin de la pandémie de COVID-19 (selon le texte)",
+    "verso": "2020",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2025-09-07T14:07:13.925Z"
+  },
+  {
+    "id": 1757254033925.9705,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Année où il n'y aurait plus eu de virus (selon le texte)",
+    "verso": "2025",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2025-09-07T14:07:13.925Z"
+  },
+  {
+    "id": 1757254033925.846,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Année de la dernière épidémie de choléra mentionnée (selon le texte)",
+    "verso": "1964",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2025-09-07T14:07:13.925Z"
+  },
+  {
+    "id": 1757254033925.0823,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Type d'infection le plus fréquent selon le texte",
+    "verso": "Infections nosocomiales",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2025-09-07T14:07:13.925Z"
+  },
+  {
+    "id": 1757254033925.6646,
+    "deck": "1 : La relation médecin-malade",
+    "recto": "Virus considéré comme le 'pire' selon le texte",
+    "verso": "Zika",
+    "rectoImage": null,
+    "versoImage": null,
+    "interval": 1,
+    "easeFactor": 2.5,
+    "nextReview": "2025-09-07T14:07:13.925Z"
   }
 ]
