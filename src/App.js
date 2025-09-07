@@ -1,84 +1,72 @@
 import React, { useState, useEffect } from 'react';
 import HomeView from './components/HomeView';
-// Importez les autres vues ici quand elles seront prêtes
-// import ReviewView from './components/ReviewView'; 
-// import ManageView from './components/ManageView';
-// import LibraryView from './components/LibraryView';
+import LibraryView from './components/LibraryView';
+import QuizView from './components/QuizView'; // ON IMPORTE LA VUE DU QUIZ
 
 function App() {
-  // L'état 'currentView' nous dit quelle page afficher. On commence par 'home'.
   const [currentView, setCurrentView] = useState('home');
-  
-  // Ces états contiendront vos données quand les API fonctionneront
   const [allCards, setAllCards] = useState([]);
   const [itemsData, setItemsData] = useState({});
+  // --- NOUVEAUX ÉTATS ---
+  const [quizQuestions, setQuizQuestions] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
-  // useEffect est l'équivalent de "DOMContentLoaded" pour React.
-  // Il se lance une seule fois au démarrage pour charger les données.
-  useEffect(() => {
-    async function loadInitialData() {
-      try {
-        const [cardsRes, itemsDataRes] = await Promise.all([
-          fetch('/api/cards'),
-          fetch('/api/items-data')
-        ]);
-        
-        if (!cardsRes.ok || !itemsDataRes.ok) {
-            throw new Error('La réponse du serveur n\'est pas OK');
-        }
+  const loadInitialData = async () => { /* ... (ne change pas) ... */
+    try {
+      const [cardsRes, itemsDataRes] = await Promise.all([ fetch('/api/cards'), fetch('/api/items-data') ]);
+      if (!cardsRes.ok || !itemsDataRes.ok) { throw new Error('Erreur serveur'); }
+      setAllCards(await cardsRes.json());
+      setItemsData(await itemsDataRes.json());
+    } catch (e) { console.error("Erreur chargement:", e); }
+  };
+  
+  useEffect(() => { loadInitialData(); }, []);
 
-        const cardsJson = await cardsRes.json();
-        const itemsDataJson = await itemsDataRes.json();
-        
-        setAllCards(cardsJson);
-        setItemsData(itemsDataJson);
-        console.log("Données chargées !", { cards: cardsJson, items: itemsDataJson });
+  const handleSaveItemData = async (item, text) => { /* ... (ne change pas) ... */
+    try {
+      await fetch('/api/items-data', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ item, text }) });
+      await loadInitialData();
+      alert('Texte enregistré !');
+    } catch (e) { alert('Échec.'); }
+  };
 
-      } catch (e) {
-        console.error("Erreur de chargement initial des données:", e);
-      }
-    }
-    loadInitialData();
-  }, []); // Le tableau vide [] signifie : "ne lance cet effet qu'une seule fois".
-
-  // Cette fonction choisit le bon composant à afficher
   const renderCurrentView = () => {
     switch (currentView) {
-      case 'review':
-        // Pour l'instant, on affiche un simple message
-        return (
-            <div>
-                <h2>Page de Révision</h2>
-                <button onClick={() => setCurrentView('home')}>← Retour à l'accueil</button>
-            </div>
-        );
-      case 'manage':
-        return (
-            <div>
-                <h2>Page de Gestion des Cartes</h2>
-                <button onClick={() => setCurrentView('home')}>← Retour à l'accueil</button>
-            </div>
-        );
       case 'library':
         return (
-            <div>
-                <h2>Bibliothèque</h2>
-                <button onClick={() => setCurrentView('home')}>← Retour à l'accueil</button>
-            </div>
+          <LibraryView 
+            navigateTo={setCurrentView} 
+            allCards={allCards}
+            itemsData={itemsData}
+            // On passe les fonctions pour mettre à jour l'état du quiz
+            onSetQuiz={setQuizQuestions}
+            onSetLoading={setIsLoading}
+          />
         );
+      case 'quiz':
+        // On affiche un spinner si c'est en cours de chargement
+        if (isLoading) {
+          return <div id="loading-spinner"></div>;
+        }
+        return <QuizView navigateTo={setCurrentView} questions={quizQuestions} />;
+      
+      // ... (les autres vues ne changent pas)
+      case 'review': return (<div><h2>Page de Révision</h2><button onClick={() => setCurrentView('home')}>← Accueil</button></div>);
+      case 'manage': return (<div><h2>Page de Gestion</h2><button onClick={() => setCurrentView('home')}>← Accueil</button></div>);
       case 'home':
       default:
-        // On passe la fonction setCurrentView à notre composant HomeView
-        // pour qu'il puisse changer de page.
-        return <HomeView navigateTo={setCurrentView} />;
+        return (
+          <HomeView 
+            navigateTo={setCurrentView} 
+            allCards={allCards}
+            itemsData={itemsData}
+            onSaveItem={handleSaveItemData} 
+          />
+        );
     }
   };
 
-  return (
-    <div className="AppContainer">
-      {renderCurrentView()}
-    </div>
-  );
+  return ( <div className="AppContainer">{renderCurrentView()}</div> );
 }
 
 export default App;
