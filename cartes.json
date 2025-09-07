@@ -4,9 +4,9 @@
     "deck": "1 : La relation médecin-malade",
     "recto": "Question initiale...",
     "verso": "Réponse initiale...",
-    "interval": 6,
-    "easeFactor": 2.6,
-    "nextReview": "2025-08-28T16:26:19.553Z"
+    "interval": 16,
+    "easeFactor": 2.7,
+    "nextReview": "2025-09-23T14:17:49.021Z"
   },
   {
     "id": 2,
@@ -3275,9 +3275,9 @@
     "verso": "2020",
     "rectoImage": null,
     "versoImage": null,
-    "interval": 6,
-    "easeFactor": 2.5,
-    "nextReview": "2025-08-28T16:45:19.829Z"
+    "interval": 15,
+    "easeFactor": 2.6,
+    "nextReview": "2025-09-22T14:17:54.856Z"
   },
   {
     "id": 1755881072630.0032,
@@ -3286,9 +3286,9 @@
     "verso": "2025",
     "rectoImage": null,
     "versoImage": null,
-    "interval": 6,
-    "easeFactor": 2.5,
-    "nextReview": "2025-08-28T16:45:24.583Z"
+    "interval": 15,
+    "easeFactor": 2.6,
+    "nextReview": "2025-09-22T14:17:58.397Z"
   },
   {
     "id": 1755881072630.78,
@@ -3297,9 +3297,9 @@
     "verso": "1964",
     "rectoImage": null,
     "versoImage": null,
-    "interval": 6,
-    "easeFactor": 2.5,
-    "nextReview": "2025-08-28T16:45:13.253Z"
+    "interval": 15,
+    "easeFactor": 2.6,
+    "nextReview": "2025-09-22T14:18:02.612Z"
   },
   {
     "id": 1755881072630.9097,

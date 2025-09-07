@@ -7,10 +7,12 @@ function QuizView({ navigateTo, questions }) {
   const [score, setScore] = useState(0);
   const [quizFinished, setQuizFinished] = useState(false);
 
+  // --- MODIFICATION ICI : On met le conteneur principal à l'intérieur du "if"
   if (!questions || questions.length === 0) {
     return (
-      <div id="quiz-view">
-        <p>Erreur: Aucune question à afficher.</p>
+      <div id="quiz-view"> {/* On ajoute l'ID pour le style */}
+        <h2>Erreur</h2>
+        <p>Aucune question n'a pu être générée.</p>
         <button onClick={() => navigateTo('library')}>Retour à la bibliothèque</button>
       </div>
     );
@@ -19,7 +21,7 @@ function QuizView({ navigateTo, questions }) {
   const currentQuestion = questions[currentQuestionIndex];
 
   const handleAnswerClick = (answer) => {
-    if (selectedAnswer) return; // Empêche de répondre plusieurs fois
+    if (selectedAnswer) return; 
 
     setSelectedAnswer(answer);
     if (answer === currentQuestion.answer) {
@@ -36,7 +38,7 @@ function QuizView({ navigateTo, questions }) {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
-      setQuizFinished(true); // Fin du quiz
+      setQuizFinished(true);
     }
   };
 
@@ -65,17 +67,10 @@ function QuizView({ navigateTo, questions }) {
           {currentQuestion.options.map((option, index) => {
             let buttonClass = '';
             if (selectedAnswer) {
-              if (option === currentQuestion.answer) {
-                buttonClass = 'correct';
-              } else if (option === selectedAnswer) {
-                buttonClass = 'incorrect';
-              }
+              if (option === currentQuestion.answer) { buttonClass = 'correct'; } 
+              else if (option === selectedAnswer) { buttonClass = 'incorrect'; }
             }
-            return (
-              <button key={index} onClick={() => handleAnswerClick(option)} className={buttonClass} disabled={!!selectedAnswer}>
-                {option}
-              </button>
-            );
+            return (<button key={index} onClick={() => handleAnswerClick(option)} className={buttonClass} disabled={!!selectedAnswer}>{option}</button>);
           })}
         </div>
         <div id="quiz-feedback">{feedback}</div>
