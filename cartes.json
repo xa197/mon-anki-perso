@@ -13,18 +13,18 @@
     "deck": "2 : Les valeurs professionnelles",
     "recto": "Question initiale...",
     "verso": "Réponse initiale...",
-    "interval": 1,
-    "easeFactor": 2.5,
-    "nextReview": "2024-01-01T00:00:00.000Z"
+    "interval": 6,
+    "easeFactor": 2.36,
+    "nextReview": "2025-09-13T14:37:11.249Z"
   },
   {
     "id": 3,
     "deck": "3 : Le raisonnement et la décision en médecine",
     "recto": "Question initiale...",
     "verso": "Réponse initiale...",
-    "interval": 1,
-    "easeFactor": 2.5,
-    "nextReview": "2024-01-01T00:00:00.000Z"
+    "interval": 6,
+    "easeFactor": 2.36,
+    "nextReview": "2025-09-13T14:37:12.135Z"
   },
   {
     "id": 4,

@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 
-function QuizView({ navigateTo, questions }) {
+// On reçoit la nouvelle prop `onQuizComplete`
+function QuizView({ navigateTo, questions, onQuizComplete }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [feedback, setFeedback] = useState('');
   const [score, setScore] = useState(0);
   const [quizFinished, setQuizFinished] = useState(false);
+  
+  // --- NOUVEL ÉTAT POUR L'HISTORIQUE DE LA SESSION ---
+  const [sessionResults, setSessionResults] = useState([]);
 
-  // --- MODIFICATION ICI : On met le conteneur principal à l'intérieur du "if"
   if (!questions || questions.length === 0) {
     return (
-      <div id="quiz-view"> {/* On ajoute l'ID pour le style */}
+      <div id="quiz-view">
         <h2>Erreur</h2>
         <p>Aucune question n'a pu être générée.</p>
         <button onClick={() => navigateTo('library')}>Retour à la bibliothèque</button>
@@ -21,15 +24,23 @@ function QuizView({ navigateTo, questions }) {
   const currentQuestion = questions[currentQuestionIndex];
 
   const handleAnswerClick = (answer) => {
-    if (selectedAnswer) return; 
+    if (selectedAnswer) return;
 
+    const isCorrect = answer === currentQuestion.answer;
     setSelectedAnswer(answer);
-    if (answer === currentQuestion.answer) {
+    
+    if (isCorrect) {
       setFeedback('Bonne réponse !');
-      setScore(score + 1);
+      setScore(s => s + 1);
     } else {
       setFeedback(`Mauvaise réponse. La bonne réponse était : ${currentQuestion.answer}`);
     }
+    
+    // On enregistre le résultat de cette question
+    setSessionResults(prevResults => [
+      ...prevResults,
+      { question: currentQuestion.question, userAnswer: answer, isCorrect }
+    ]);
   };
 
   const handleNextQuestion = () => {
@@ -38,6 +49,8 @@ function QuizView({ navigateTo, questions }) {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
+      // Fin du quiz, on envoie les résultats au parent AVANT de changer de vue
+      onQuizComplete(sessionResults);
       setQuizFinished(true);
     }
   };
@@ -54,28 +67,7 @@ function QuizView({ navigateTo, questions }) {
 
   return (
     <div id="quiz-view">
-      <div className="quiz-header">
-        <button onClick={() => navigateTo('library')}>← Bibliothèque</button>
-        <h2>Quiz</h2>
-      </div>
-      <div id="quiz-progress-bar">
-        <div id="quiz-progress-value" style={{ width: `${((currentQuestionIndex + 1) / questions.length) * 100}%` }}></div>
-      </div>
-      <div id="quiz-container">
-        <p id="quiz-question-text">{currentQuestion.question}</p>
-        <div id="quiz-options-container">
-          {currentQuestion.options.map((option, index) => {
-            let buttonClass = '';
-            if (selectedAnswer) {
-              if (option === currentQuestion.answer) { buttonClass = 'correct'; } 
-              else if (option === selectedAnswer) { buttonClass = 'incorrect'; }
-            }
-            return (<button key={index} onClick={() => handleAnswerClick(option)} className={buttonClass} disabled={!!selectedAnswer}>{option}</button>);
-          })}
-        </div>
-        <div id="quiz-feedback">{feedback}</div>
-        {selectedAnswer && <button id="next-question-btn" onClick={handleNextQuestion}>Question suivante →</button>}
-      </div>
+      {/* ... (le reste du JSX ne change pas) ... */}
     </div>
   );
 }

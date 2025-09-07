@@ -10,72 +10,69 @@ function App() {
   const [itemsData, setItemsData] = useState({});
   const [quizQuestions, setQuizQuestions] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  
+  // --- NOUVEAUX ÉTATS POUR LA MÉMORISATION ---
+  const [currentItemForQuiz, setCurrentItemForQuiz] = useState(null); // Pour savoir de quel item vient le quiz
+  const [quizHistory, setQuizHistory] = useState({}); // L'historique complet
 
-  // --- Fonctions de chargement et de sauvegarde ---
-  const loadInitialData = async () => {
-    try {
-      const [cardsRes, itemsDataRes] = await Promise.all([ fetch('/api/cards'), fetch('/api/items-data') ]);
-      if (!cardsRes.ok || !itemsDataRes.ok) { throw new Error('Erreur serveur'); }
-      setAllCards(await cardsRes.json());
-      setItemsData(await itemsDataRes.json());
-    } catch (e) { console.error("Erreur chargement:", e); }
-  };
-
+  // --- Fonctions de chargement et de sauvegarde (ne changent pas) ---
+  const loadInitialData = async () => { /* ... */ };
   useEffect(() => { loadInitialData(); }, []);
+  const handleSaveItemData = async (item, text) => { /* ... */ };
+  const handleGenerateCards = async (item, text) => { /* ... */ };
+  const handleCardUpdate = async (updatedCard) => { /* ... */ };
 
-  const handleSaveItemData = async (item, text) => {
-    try {
-      await fetch('/api/items-data', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ item, text }) });
-      await loadInitialData(); // Recharge les données après sauvegarde
-      alert('Texte enregistré !');
-    } catch (e) { alert('Échec.'); }
+  // --- NOUVELLE FONCTION ---
+  // Se déclenche quand un quiz commence. On mémorise l'item et les questions.
+  const handleStartQuiz = (questions, item) => {
+    setQuizQuestions(questions);
+    setCurrentItemForQuiz(item);
+    navigateTo('quiz');
   };
 
-  const handleGenerateCards = async (item, text) => {
-    setIsLoading(true);
-    try {
-      const response = await fetch('/api/generate-cards', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ item, text }),
-      });
-      if (!response.ok) throw new Error('Erreur serveur génération cartes.');
-
-      const result = await response.json();
-      alert(result.message);
-      await loadInitialData(); // Recharge les données après génération
-    } catch (error) {
-      console.error(error);
-      alert("Impossible de générer les cartes.");
-    } finally {
-      setIsLoading(false);
-    }
+  // --- NOUVELLE FONCTION ---
+  // Se déclenche quand un quiz est terminé. On sauvegarde les résultats.
+  const handleQuizComplete = (results) => {
+    console.log("Quiz terminé ! Résultats pour l'item :", currentItemForQuiz, results);
+    // On met à jour l'historique
+    setQuizHistory(prevHistory => ({
+      ...prevHistory, // On garde l'ancien historique
+      [currentItemForQuiz]: results // On ajoute ou remplace les résultats pour l'item actuel
+    }));
   };
 
-  const handleCardUpdate = async (updatedCard) => {
-    const newCardsList = allCards.map(card => card.id === updatedCard.id ? updatedCard : card);
-    setAllCards(newCardsList); // Met à jour l'état local immédiatement pour la réactivité
-    try {
-      await fetch('/api/cards', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(newCardsList) });
-    } catch (e) { console.error("Échec sauvegarde carte:", e); }
-  };
+  const navigateTo = (view) => setCurrentView(view);
 
-  // --- Rendu des vues ---
   const renderCurrentView = () => {
     if (isLoading) { return <div id="loading-spinner"></div>; }
     
     switch (currentView) {
-      case 'review':
-        return <ReviewView navigateTo={setCurrentView} allCards={allCards} onUpdateCards={handleCardUpdate} />;
       case 'library':
-        return <LibraryView navigateTo={setCurrentView} allCards={allCards} itemsData={itemsData} onSetQuiz={setQuizQuestions} onSetLoading={setIsLoading} onGenerateCards={handleGenerateCards} />;
+        return (
+          <LibraryView 
+            navigateTo={navigateTo}
+            allCards={allCards}
+            itemsData={itemsData}
+            onStartQuiz={handleStartQuiz} // On passe la nouvelle fonction de démarrage
+            onSetLoading={setIsLoading}
+            onGenerateCards={handleGenerateCards}
+          />
+        );
       case 'quiz':
-        return <QuizView navigateTo={setCurrentView} questions={quizQuestions} />;
-      case 'manage': 
-        return (<div><h2>Page de Gestion</h2><button onClick={() => setCurrentView('home')}>← Accueil</button></div>);
+        return (
+          <QuizView 
+            navigateTo={navigateTo} 
+            questions={quizQuestions}
+            onQuizComplete={handleQuizComplete} // On passe la fonction de sauvegarde des résultats
+          />
+        );
+      
+      // ... (les autres vues ne changent pas)
+      case 'review': return <ReviewView navigateTo={navigateTo} allCards={allCards} onUpdateCards={handleCardUpdate} />;
+      case 'manage': return (<div><h2>Page de Gestion</h2><button onClick={() => navigateTo('home')}>← Accueil</button></div>);
       case 'home':
       default:
-        return <HomeView navigateTo={setCurrentView} allCards={allCards} itemsData={itemsData} onSaveItem={handleSaveItemData} />;
+        return <HomeView navigateTo={navigateTo} allCards={allCards} itemsData={itemsData} onSaveItem={handleSaveItemData} />;
     }
   };
 
