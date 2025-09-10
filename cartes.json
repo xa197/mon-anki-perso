@@ -31,9 +31,9 @@
     "deck": "4 : La sécurité du patient et la gestion des risques",
     "recto": "Question initiale...",
     "verso": "Réponse initiale...",
-    "interval": 1,
-    "easeFactor": 2.5,
-    "nextReview": "2024-01-01T00:00:00.000Z"
+    "interval": 6,
+    "easeFactor": 2.36,
+    "nextReview": "2025-09-13T14:49:09.734Z"
   },
   {
     "id": 5,
@@ -3308,9 +3308,9 @@
     "verso": "Infections nosocomiales",
     "rectoImage": null,
     "versoImage": null,
-    "interval": 6,
-    "easeFactor": 2.5,
-    "nextReview": "2025-08-28T16:46:43.906Z"
+    "interval": 15,
+    "easeFactor": 2.36,
+    "nextReview": "2025-09-22T14:49:14.452Z"
   },
   {
     "id": 1755881072630.5608,

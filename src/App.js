@@ -1,82 +1,170 @@
 import React, { useState, useEffect } from 'react';
-import HomeView from './components/HomeView';
-import LibraryView from './components/LibraryView';
 import QuizView from './components/QuizView';
-import ReviewView from './components/ReviewView';
 
 function App() {
-  const [currentView, setCurrentView] = useState('home');
+  // --- ÉTATS PRINCIPAUX ---
   const [allCards, setAllCards] = useState([]);
   const [itemsData, setItemsData] = useState({});
-  const [quizQuestions, setQuizQuestions] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   
-  // --- NOUVEAUX ÉTATS POUR LA MÉMORISATION ---
-  const [currentItemForQuiz, setCurrentItemForQuiz] = useState(null); // Pour savoir de quel item vient le quiz
-  const [quizHistory, setQuizHistory] = useState({}); // L'historique complet
+  // --- ÉTATS POUR LA RUBRIQUE 1 : ATELIER ---
+  const [selectedItemAtelier, setSelectedItemAtelier] = useState('');
+  const [atelierText, setAtelierText] = useState('');
+  const [newItemName, setNewItemName] = useState('');
 
-  // --- Fonctions de chargement et de sauvegarde (ne changent pas) ---
-  const loadInitialData = async () => { /* ... */ };
-  useEffect(() => { loadInitialData(); }, []);
-  const handleSaveItemData = async (item, text) => { /* ... */ };
-  const handleGenerateCards = async (item, text) => { /* ... */ };
-  const handleCardUpdate = async (updatedCard) => { /* ... */ };
+  // --- ÉTATS POUR LA RUBRIQUE 2 : QUIZ ---
+  const [selectedItemsQuiz, setSelectedItemsQuiz] = useState(new Set());
+  const [numQCM, setNumQCM] = useState(5);
+  const [quizQuestions, setQuizQuestions] = useState([]);
+  const [isQuizActive, setIsQuizActive] = useState(false); // Cet état contrôle l'affichage
 
-  // --- NOUVELLE FONCTION ---
-  // Se déclenche quand un quiz commence. On mémorise l'item et les questions.
-  const handleStartQuiz = (questions, item) => {
-    setQuizQuestions(questions);
-    setCurrentItemForQuiz(item);
-    navigateTo('quiz');
+  // --- Fonctions de chargement et de sauvegarde ---
+  const loadData = async () => {
+    try {
+      const [cardsRes, itemsDataRes] = await Promise.all([ fetch('/api/cards'), fetch('/api/items-data') ]);
+      setAllCards(await cardsRes.json());
+      setItemsData(await itemsDataRes.json());
+    } catch (e) { console.error("Erreur chargement:", e); }
   };
+  useEffect(() => { loadData(); }, []);
 
-  // --- NOUVELLE FONCTION ---
-  // Se déclenche quand un quiz est terminé. On sauvegarde les résultats.
-  const handleQuizComplete = (results) => {
-    console.log("Quiz terminé ! Résultats pour l'item :", currentItemForQuiz, results);
-    // On met à jour l'historique
-    setQuizHistory(prevHistory => ({
-      ...prevHistory, // On garde l'ancien historique
-      [currentItemForQuiz]: results // On ajoute ou remplace les résultats pour l'item actuel
-    }));
-  };
-
-  const navigateTo = (view) => setCurrentView(view);
-
-  const renderCurrentView = () => {
-    if (isLoading) { return <div id="loading-spinner"></div>; }
-    
-    switch (currentView) {
-      case 'library':
-        return (
-          <LibraryView 
-            navigateTo={navigateTo}
-            allCards={allCards}
-            itemsData={itemsData}
-            onStartQuiz={handleStartQuiz} // On passe la nouvelle fonction de démarrage
-            onSetLoading={setIsLoading}
-            onGenerateCards={handleGenerateCards}
-          />
-        );
-      case 'quiz':
-        return (
-          <QuizView 
-            navigateTo={navigateTo} 
-            questions={quizQuestions}
-            onQuizComplete={handleQuizComplete} // On passe la fonction de sauvegarde des résultats
-          />
-        );
-      
-      // ... (les autres vues ne changent pas)
-      case 'review': return <ReviewView navigateTo={navigateTo} allCards={allCards} onUpdateCards={handleCardUpdate} />;
-      case 'manage': return (<div><h2>Page de Gestion</h2><button onClick={() => navigateTo('home')}>← Accueil</button></div>);
-      case 'home':
-      default:
-        return <HomeView navigateTo={navigateTo} allCards={allCards} itemsData={itemsData} onSaveItem={handleSaveItemData} />;
+  const handleAddNewItem = async () => {
+    if (!newItemName.trim()) return alert('Le nom ne peut pas être vide.');
+    const response = await fetch('/api/add-item', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ newItemName: newItemName.trim() })
+    });
+    if (response.ok) {
+      setNewItemName('');
+      await loadData();
+      alert('Item ajouté !');
+    } else {
+      alert(await response.text());
     }
   };
 
-  return ( <div className="AppContainer">{renderCurrentView()}</div> );
+  const handleSaveText = async () => {
+    if (!selectedItemAtelier) return alert('Veuillez sélectionner un item.');
+    await fetch('/api/items-data', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ item: selectedItemAtelier, text: atelierText })
+    });
+    alert('Texte enregistré !');
+    await loadData();
+  };
+  
+  const handleAtelierSelectChange = (e) => {
+    const item = e.target.value;
+    setSelectedItemAtelier(item);
+    setAtelierText(itemsData[item] || '');
+  };
+
+  // --- LOGIQUE QUIZ ---
+  const handleQuizItemToggle = (itemName) => {
+    const newSelection = new Set(selectedItemsQuiz);
+    if (newSelection.has(itemName)) {
+      newSelection.delete(itemName);
+    } else {
+      newSelection.add(itemName);
+    }
+    setSelectedItemsQuiz(newSelection);
+  };
+
+  const handleLaunchQuiz = async () => {
+    if (selectedItemsQuiz.size === 0) return alert('Veuillez sélectionner au moins un item.');
+    setIsLoading(true);
+    const textsToQuiz = Array.from(selectedItemsQuiz).map(item => itemsData[item]).filter(Boolean);
+    try {
+        const response = await fetch('/api/generate-questions', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ texts: textsToQuiz, numQCM })
+        });
+        const data = await response.json();
+        if (data.error || !data.questions) throw new Error(data.error || 'Pas de questions reçues');
+        setQuizQuestions(data.questions);
+        setIsQuizActive(true); // On active la vue du quiz
+    } catch(e) {
+        alert("Impossible de générer le quiz.");
+        console.error(e);
+    } finally {
+        setIsLoading(false);
+    }
+  };
+
+  // --- AFFICHAGE ---
+  const sortedItems = Array.from(new Set(allCards.map(c => c.deck).filter(Boolean)))
+    .sort((a, b) => parseInt(a.split(':')[0], 10) - parseInt(b.split(':')[0], 10));
+
+  if (isLoading) {
+    return <div id="loading-spinner"></div>;
+  }
+
+  // Si le quiz est actif, on affiche UNIQUEMENT la vue du quiz
+  if (isQuizActive) {
+    return <QuizView questions={quizQuestions} onQuizEnd={() => setIsQuizActive(false)} />;
+  }
+
+  // Sinon (par défaut), on affiche la page principale avec les deux rubriques
+  return (
+    <div className="main-container">
+      {/* --- RUBRIQUE 1 : ATELIER --- */}
+      <section className="rubrique">
+        <h2>Atelier de Contenu</h2>
+        <div className="form-group">
+          <input 
+            type="text" 
+            value={newItemName} 
+            onChange={e => setNewItemName(e.target.value)} 
+            placeholder="Nom du nouvel item (ex: 12: Nouveau cours)"
+          />
+          <button onClick={handleAddNewItem}>Ajouter Item</button>
+        </div>
+        <div className="form-group">
+          <select value={selectedItemAtelier} onChange={handleAtelierSelectChange}>
+            <option value="">-- Consulter / Modifier un item --</option>
+            {sortedItems.map(item => <option key={item} value={item}>{item}</option>)}
+          </select>
+        </div>
+        <textarea 
+          value={atelierText} 
+          onChange={e => setAtelierText(e.target.value)}
+          placeholder="Le contenu de l'item sélectionné apparaîtra ici..."
+        />
+        <button onClick={handleSaveText} disabled={!selectedItemAtelier}>Enregistrer le Texte</button>
+      </section>
+
+      {/* --- RUBRIQUE 2 : QUIZ --- */}
+      <section className="rubrique">
+        <h2>Générateur de Quiz</h2>
+        <p>Choisissez les items à inclure :</p>
+        <div className="checkbox-group">
+          {sortedItems.map(item => (
+            <label key={item}>
+              <input 
+                type="checkbox" 
+                checked={selectedItemsQuiz.has(item)}
+                onChange={() => handleQuizItemToggle(item)}
+              />
+              {item}
+            </label>
+          ))}
+        </div>
+        <div className="form-group">
+          <label>Nombre de QCM :</label>
+          <input 
+            type="number"
+            value={numQCM}
+            onChange={e => setNumQCM(parseInt(e.target.value))}
+            min="1"
+          />
+        </div>
+        <button onClick={handleLaunchQuiz}>Lancer le Quiz</button>
+      </section>
+    </div>
+  );
 }
 
 export default App;
