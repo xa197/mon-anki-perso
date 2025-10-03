@@ -20,7 +20,6 @@ const itemsDataPath = path.join(__dirname, 'items_data.json');
 
 // --- ROUTES API ---
 
-// === CORRECTION DE CETTE ROUTE ===
 app.post('/api/generate-questions', async (req, res) => {
     const { texts, numQCM } = req.body;
     if (!texts || !Array.isArray(texts) || texts.length === 0) {
@@ -30,10 +29,9 @@ app.post('/api/generate-questions', async (req, res) => {
     const combinedText = texts.join('\n\n---\n\n');
 
     try {
-        // === LA CORRECTION EST ICI ===
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash", safetySettings });
+        // === LA NOUVELLE CORRECTION EST ICI ===
+        const model = genAI.getGenerativeModel({ model: "gemini-pro", safetySettings });
         
-        // On remet le prompt détaillé qui fonctionne
         const prompt = `**Instruction :** Tu es un assistant expert en création de matériel pédagogique pour des étudiants en médecine. Ton rôle est de générer des questions pertinentes à partir du texte fourni.
         **Format de sortie obligatoire :** Réponds UNIQUEMENT avec un objet JSON valide. Ne rien inclure avant ou après le JSON. N'utilise pas de blocs de code Markdown (\`\`\`json).
         **Structure du JSON :** L'objet JSON doit contenir une clé "questions" qui est un tableau d'objets. Chaque objet question doit avoir : une clé "type" ('QCM'), une clé "question", une clé "options" (un tableau de 4 chaînes de caractères), et une clé "answer" (la réponse correcte, qui doit être l'une des 4 options).
@@ -75,7 +73,6 @@ app.post('/api/add-item', (req, res) => {
     });
 });
 
-// ... (le reste des routes : /api/items-data, etc. ne change pas)
 app.get('/api/cards', (req, res) => { fs.readFile(cardsFilePath, 'utf8', (err, data) => { if (err) { if (err.code === 'ENOENT') return res.json([]); return res.status(500).send('Erreur lecture cartes.'); } try { res.json(JSON.parse(data)); } catch (e) { res.status(500).send('Fichier cartes.json corrompu.'); } }); });
 app.get('/api/items-data', (req, res) => { fs.readFile(itemsDataPath, 'utf8', (err, data) => { if (err) { if (err.code === 'ENOENT') return res.json({}); return res.status(500).send('Erreur lecture données items.'); } if (data.trim() === '') return res.json({}); try { res.json(JSON.parse(data)); } catch (e) { res.status(500).send('Fichier items_data.json corrompu.'); } }); });
 app.post('/api/items-data', (req, res) => { const { item, text } = req.body; if (!item) return res.status(400).send('Nom de l\'item manquant.'); fs.readFile(itemsDataPath, 'utf8', (err, data) => { let itemsData = {}; if (!err && data.trim() !== '') { try { itemsData = JSON.parse(data); } catch (e) {} } itemsData[item] = text; fs.writeFile(itemsDataPath, JSON.stringify(itemsData, null, 2), 'utf8', (err) => { if (err) return res.status(500).send('Erreur sauvegarde données item.'); res.status(200).send('Données de l\'item sauvegardées.'); }); }); });
