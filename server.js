@@ -6,8 +6,12 @@ const { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } = require('@googl
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-if (!process.env.GOOGLE_API_KEY) { console.error("ERREUR: GOOGLE_API_KEY non définie."); process.exit(1); }
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
+// === MODIFICATION DE TEST ULTIME ===
+// Assurez-vous d'avoir mis votre NOUVELLE clé API générée via Google AI Studio
+const API_KEY = "AIzaSyBFI5gzQ3EvaAdC8e4D4EXRDZQD01ye10M"; 
+const genAI = new GoogleGenerativeAI(API_KEY);
+// ===================================
+
 const safetySettings = [
     { category: HarmCategory.HARM_CATEGORY_HARASSMENT, threshold: HarmBlockThreshold.BLOCK_NONE },
     { category: HarmCategory.HARM_CATEGORY_HATE_SPEECH, threshold: HarmBlockThreshold.BLOCK_NONE },
@@ -29,7 +33,6 @@ app.post('/api/generate-questions', async (req, res) => {
     const combinedText = texts.join('\n\n---\n\n');
 
     try {
-        // === LA MODIFICATION FINALE : Utiliser le modèle compatible avec la bibliothèque v0.15.0 ===
         const model = genAI.getGenerativeModel({ model: "gemini-pro", safetySettings });
         
         const prompt = `**Instruction :** Tu es un assistant expert en création de matériel pédagogique pour des étudiants en médecine. Ton rôle est de générer des questions pertinentes à partir du texte fourni.
@@ -56,6 +59,7 @@ app.post('/api/generate-questions', async (req, res) => {
     }
 });
 
+// ... (le reste de votre code ne change pas) ...
 app.post('/api/add-item', (req, res) => {
     const { newItemName } = req.body;
     if (!newItemName || newItemName.trim() === '') { return res.status(400).send('Le nom de l\'item ne peut pas être vide.'); }
@@ -77,8 +81,6 @@ app.get('/api/cards', (req, res) => { fs.readFile(cardsFilePath, 'utf8', (err, d
 app.get('/api/items-data', (req, res) => { fs.readFile(itemsDataPath, 'utf8', (err, data) => { if (err) { if (err.code === 'ENOENT') return res.json({}); return res.status(500).send('Erreur lecture données items.'); } if (data.trim() === '') return res.json({}); try { res.json(JSON.parse(data)); } catch (e) { res.status(500).send('Fichier items_data.json corrompu.'); } }); });
 app.post('/api/items-data', (req, res) => { const { item, text } = req.body; if (!item) return res.status(400).send('Nom de l\'item manquant.'); fs.readFile(itemsDataPath, 'utf8', (err, data) => { let itemsData = {}; if (!err && data.trim() !== '') { try { itemsData = JSON.parse(data); } catch (e) {} } itemsData[item] = text; fs.writeFile(itemsDataPath, JSON.stringify(itemsData, null, 2), 'utf8', (err) => { if (err) return res.status(500).send('Erreur sauvegarde données item.'); res.status(200).send('Données de l\'item sauvegardées.'); }); }); });
 
-
-// --- FICHIERS STATIQUES & ROUTE CATCH-ALL ---
 app.use(express.static(path.join(__dirname, 'build')));
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
