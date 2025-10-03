@@ -30,7 +30,8 @@ app.post('/api/generate-questions', async (req, res) => {
     const combinedText = texts.join('\n\n---\n\n');
 
     try {
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest", safetySettings });
+        // === LA CORRECTION EST ICI ===
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash", safetySettings });
         
         // On remet le prompt détaillé qui fonctionne
         const prompt = `**Instruction :** Tu es un assistant expert en création de matériel pédagogique pour des étudiants en médecine. Ton rôle est de générer des questions pertinentes à partir du texte fourni.
