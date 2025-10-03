@@ -1,12 +1,24 @@
+// Contenu complet pour QuizView.js - Copiez et remplacez tout votre fichier
+
 import React, { useState } from 'react';
 
-// Reçoit les questions et une fonction `onQuizEnd` pour signaler la fin
+// Fonction utilitaire pour comparer deux tableaux de réponses sans tenir compte de l'ordre
+const areArraysEqual = (arr1, arr2) => {
+  if (arr1.length !== arr2.length) return false;
+  const sortedArr1 = [...arr1].sort();
+  const sortedArr2 = [...arr2].sort();
+  return sortedArr1.every((value, index) => value === sortedArr2[index]);
+};
+
 function QuizView({ questions, onQuizEnd }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
+  // On utilise un tableau pour stocker les réponses sélectionnées (au lieu d'une seule chaîne)
+  const [selectedAnswers, setSelectedAnswers] = useState([]);
   const [feedback, setFeedback] = useState('');
   const [score, setScore] = useState(0);
   const [quizFinished, setQuizFinished] = useState(false);
+  // Nouvel état pour savoir si l'utilisateur a validé sa réponse pour la question actuelle
+  const [isAnswerSubmitted, setIsAnswerSubmitted] = useState(false);
 
   if (!questions || questions.length === 0) {
     return (
@@ -18,23 +30,41 @@ function QuizView({ questions, onQuizEnd }) {
     );
   }
 
+  // On renomme la clé "answer" en "answers" pour correspondre au nouveau format
   const currentQuestion = questions[currentQuestionIndex];
+  // Mesure de sécurité si l'API renvoie accidentellement "answer" au lieu de "answers"
+  const correctAnswers = currentQuestion.answers || [currentQuestion.answer];
 
-  const handleAnswerClick = (answer) => {
-    if (selectedAnswer) return;
-    setSelectedAnswer(answer);
-    if (answer === currentQuestion.answer) {
+  // Gère la sélection/désélection des cases à cocher
+  const handleOptionChange = (option) => {
+    setSelectedAnswers(prevAnswers => {
+      if (prevAnswers.includes(option)) {
+        return prevAnswers.filter(item => item !== option); // Désélectionner
+      } else {
+        return [...prevAnswers, option]; // Sélectionner
+      }
+    });
+  };
+
+  // Logique de validation lors du clic sur "Valider"
+  const handleSubmitAnswer = () => {
+    setIsAnswerSubmitted(true);
+    const isCorrect = areArraysEqual(selectedAnswers, correctAnswers);
+
+    if (isCorrect) {
       setFeedback('Bonne réponse !');
       setScore(s => s + 1);
     } else {
-      setFeedback(`Mauvaise réponse. La bonne réponse était : ${currentQuestion.answer}`);
+      setFeedback(`Mauvaise réponse. La ou les bonne(s) réponse(s) était(ent) : ${correctAnswers.join(', ')}`);
     }
   };
 
+  // Passe à la question suivante
   const handleNextQuestion = () => {
     if (currentQuestionIndex < questions.length - 1) {
-      setSelectedAnswer(null);
+      setSelectedAnswers([]);
       setFeedback('');
+      setIsAnswerSubmitted(false);
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
       setQuizFinished(true);
@@ -62,18 +92,39 @@ function QuizView({ questions, onQuizEnd }) {
       </div>
       <div id="quiz-container">
         <p id="quiz-question-text">{currentQuestion.question}</p>
-        <div id="quiz-options-container">
+        
+        {/* On utilise des cases à cocher (checkbox) au lieu de boutons */}
+        <div id="quiz-options-container" className="checkbox-container">
           {currentQuestion.options.map((option, index) => {
-            let buttonClass = '';
-            if (selectedAnswer) {
-              if (option === currentQuestion.answer) { buttonClass = 'correct'; } 
-              else if (option === selectedAnswer) { buttonClass = 'incorrect'; }
+            let labelClass = '';
+            // Logique pour le feedback visuel après validation
+            if (isAnswerSubmitted) {
+              if (correctAnswers.includes(option)) {
+                labelClass = 'correct'; // C'est une bonne réponse
+              } else if (selectedAnswers.includes(option)) {
+                labelClass = 'incorrect'; // C'est une mauvaise réponse que l'utilisateur a cochée
+              }
             }
-            return (<button key={index} onClick={() => handleAnswerClick(option)} className={buttonClass} disabled={!!selectedAnswer}>{option}</button>);
+            return (
+              <label key={index} className={`checkbox-label ${labelClass}`}>
+                <input
+                  type="checkbox"
+                  checked={selectedAnswers.includes(option)}
+                  onChange={() => handleOptionChange(option)}
+                  disabled={isAnswerSubmitted}
+                />
+                {option}
+              </label>
+            );
           })}
         </div>
+        
         <div id="quiz-feedback">{feedback}</div>
-        {selectedAnswer && <button id="next-question-btn" onClick={handleNextQuestion}>Question suivante →</button>}
+        
+        {/* On affiche "Valider" avant la validation, et "Question suivante" après */}
+        {!isAnswerSubmitted && <button id="submit-answer-btn" onClick={handleSubmitAnswer} disabled={selectedAnswers.length === 0}>Valider</button>}
+        {isAnswerSubmitted && <button id="next-question-btn" onClick={handleNextQuestion}>Question suivante →</button>}
+
       </div>
     </div>
   );
