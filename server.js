@@ -29,8 +29,8 @@ app.post('/api/generate-questions', async (req, res) => {
     const combinedText = texts.join('\n\n---\n\n');
 
     try {
-        // === LA NOUVELLE CORRECTION EST ICI ===
-        const model = genAI.getGenerativeModel({ model: "gemini-pro", safetySettings });
+        // === MODIFICATION APPLIQUÉE ICI ===
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash", safetySettings });
         
         const prompt = `**Instruction :** Tu es un assistant expert en création de matériel pédagogique pour des étudiants en médecine. Ton rôle est de générer des questions pertinentes à partir du texte fourni.
         **Format de sortie obligatoire :** Réponds UNIQUEMENT avec un objet JSON valide. Ne rien inclure avant ou après le JSON. N'utilise pas de blocs de code Markdown (\`\`\`json).
