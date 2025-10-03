@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import AccueilView from './components/AccueilView';
 import AtelierView from './components/AtelierView';
 import QuizGeneratorView from './components/QuizGeneratorView';
 import QuizView from './components/QuizView';
 
 function App() {
   // --- ÉTATS ---
-  const [view, setView] = useState('accueil'); // accueil, atelier, quizGenerator, quiz
+  const [view, setView] = useState('atelier');
   const [allCards, setAllCards] = useState([]);
   const [itemsData, setItemsData] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [quizQuestions, setQuizQuestions] = useState([]);
 
-  // --- LOGIQUE DE DONNÉES ---
+  // --- FONCTIONS DE DONNÉES (COMPLÈTES ET RESTAURÉES) ---
   const loadData = async () => {
     try {
       const [cardsRes, itemsDataRes] = await Promise.all([ fetch('/api/cards'), fetch('/api/items-data') ]);
+      if (!cardsRes.ok || !itemsDataRes.ok) { throw new Error('Erreur serveur'); }
       setAllCards(await cardsRes.json());
       setItemsData(await itemsDataRes.json());
     } catch (e) { console.error("Erreur chargement:", e); }
@@ -66,18 +66,45 @@ function App() {
 
   // --- AFFICHAGE ---
   if (isLoading) { return <div id="loading-spinner"></div>; }
-
-  switch (view) {
-    case 'atelier':
-      return <AtelierView navigateTo={setView} allCards={allCards} itemsData={itemsData} onSave={handleSaveText} onAddItem={handleAddNewItem} />;
-    case 'quizGenerator':
-      return <QuizGeneratorView navigateTo={setView} allCards={allCards} onLaunchQuiz={handleLaunchQuiz} />;
-    case 'quiz':
-      return <QuizView questions={quizQuestions} onQuizEnd={() => setView('quizGenerator')} />;
-    case 'accueil':
-    default:
-      return <AccueilView navigateTo={setView} />;
+  
+  if (view === 'quiz') {
+    return <QuizView questions={quizQuestions} onQuizEnd={() => setView('quizGenerator')} />;
   }
+
+  return (
+    <div className="app-layout">
+      <header className="main-header">
+        <h1>Mon Anki Perso</h1>
+        <nav className="main-nav">
+          <button onClick={() => setView('atelier')} className={view === 'atelier' ? 'active' : ''}>
+            Atelier
+          </button>
+          <button onClick={() => setView('quizGenerator')} className={view === 'quizGenerator' ? 'active' : ''}>
+            Quiz
+          </button>
+        </nav>
+      </header>
+      
+      <main className="main-content">
+        {view === 'atelier' && (
+          <AtelierView 
+            navigateTo={setView}
+            allCards={allCards} 
+            itemsData={itemsData} 
+            onSave={handleSaveText} 
+            onAddItem={handleAddNewItem} 
+          />
+        )}
+        {view === 'quizGenerator' && (
+          <QuizGeneratorView 
+            navigateTo={setView}
+            allCards={allCards} 
+            onLaunchQuiz={handleLaunchQuiz} 
+          />
+        )}
+      </main>
+    </div>
+  );
 }
 
 export default App;

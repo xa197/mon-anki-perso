@@ -6,7 +6,6 @@ const { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } = require('@googl
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// ... (toute la configuration initiale : genAI, safetySettings, multer, etc. ne change pas)
 if (!process.env.GOOGLE_API_KEY) { console.error("ERREUR: GOOGLE_API_KEY non définie."); process.exit(1); }
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
 const safetySettings = [
@@ -19,23 +18,29 @@ app.use(express.json());
 const cardsFilePath = path.join(__dirname, 'cartes.json');
 const itemsDataPath = path.join(__dirname, 'items_data.json');
 
-
 // --- ROUTES API ---
 
-// === MODIFICATION ICI : La route accepte maintenant plusieurs textes ===
+// === CORRECTION DE CETTE ROUTE ===
 app.post('/api/generate-questions', async (req, res) => {
     const { texts, numQCM } = req.body;
     if (!texts || !Array.isArray(texts) || texts.length === 0) {
         return res.status(400).json({ error: "Aucun texte fourni." });
     }
-
     const qcmCount = parseInt(numQCM, 10) || 5;
-    const combinedText = texts.join('\n\n---\n\n'); // On combine les textes
+    const combinedText = texts.join('\n\n---\n\n');
 
     try {
         const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest", safetySettings });
-        const prompt = `**Instruction :** Tu es un assistant expert... **Tâche :** Génère ${qcmCount} QCM à partir du texte suivant :\n${combinedText}`; // Votre prompt complet ici
-        // ... (le reste de la logique de parsing ne change pas)
+        
+        // On remet le prompt détaillé qui fonctionne
+        const prompt = `**Instruction :** Tu es un assistant expert en création de matériel pédagogique pour des étudiants en médecine. Ton rôle est de générer des questions pertinentes à partir du texte fourni.
+        **Format de sortie obligatoire :** Réponds UNIQUEMENT avec un objet JSON valide. Ne rien inclure avant ou après le JSON. N'utilise pas de blocs de code Markdown (\`\`\`json).
+        **Structure du JSON :** L'objet JSON doit contenir une clé "questions" qui est un tableau d'objets. Chaque objet question doit avoir : une clé "type" ('QCM'), une clé "question", une clé "options" (un tableau de 4 chaînes de caractères), et une clé "answer" (la réponse correcte, qui doit être l'une des 4 options).
+        **Tâche :** Génère ${qcmCount} QCM à partir du texte suivant :
+        --- DEBUT DU TEXTE ---
+        ${combinedText}
+        --- FIN DU TEXTE ---`;
+        
         const result = await model.generateContent(prompt);
         const response = result.response;
         let jsonString = response.text();
@@ -52,39 +57,24 @@ app.post('/api/generate-questions', async (req, res) => {
     }
 });
 
-// NOUVELLE ROUTE pour créer un item (ajoute une carte vide pour que le nom existe)
 app.post('/api/add-item', (req, res) => {
     const { newItemName } = req.body;
-    if (!newItemName || newItemName.trim() === '') {
-        return res.status(400).send('Le nom de l\'item ne peut pas être vide.');
-    }
+    if (!newItemName || newItemName.trim() === '') { return res.status(400).send('Le nom de l\'item ne peut pas être vide.'); }
     fs.readFile(cardsFilePath, 'utf8', (err, data) => {
         let cards = [];
         if (!err && data) { try { cards = JSON.parse(data); } catch (e) {} }
-
-        // On vérifie si un item avec ce nom existe déjà
         const itemExists = cards.some(card => card.deck === newItemName);
-        if (itemExists) {
-            return res.status(409).send('Cet item existe déjà.'); // 409 Conflict
-        }
-
-        const placeholderCard = {
-            id: Date.now(),
-            deck: newItemName,
-            recto: "Carte initiale",
-            verso: "Carte initiale",
-            nextReview: new Date().toISOString()
-        };
+        if (itemExists) { return res.status(409).send('Cet item existe déjà.'); }
+        const placeholderCard = { id: Date.now(), deck: newItemName, recto: "Carte initiale", verso: "Carte initiale", nextReview: new Date().toISOString() };
         cards.push(placeholderCard);
         fs.writeFile(cardsFilePath, JSON.stringify(cards, null, 2), 'utf8', (err) => {
             if (err) return res.status(500).send('Erreur sauvegarde.');
-            res.status(201).send('Item créé avec succès.'); // 201 Created
+            res.status(201).send('Item créé avec succès.');
         });
     });
 });
 
-
-// ... (le reste des routes : /api/cards, /api/items-data, etc. ne change PAS)
+// ... (le reste des routes : /api/items-data, etc. ne change pas)
 app.get('/api/cards', (req, res) => { fs.readFile(cardsFilePath, 'utf8', (err, data) => { if (err) { if (err.code === 'ENOENT') return res.json([]); return res.status(500).send('Erreur lecture cartes.'); } try { res.json(JSON.parse(data)); } catch (e) { res.status(500).send('Fichier cartes.json corrompu.'); } }); });
 app.get('/api/items-data', (req, res) => { fs.readFile(itemsDataPath, 'utf8', (err, data) => { if (err) { if (err.code === 'ENOENT') return res.json({}); return res.status(500).send('Erreur lecture données items.'); } if (data.trim() === '') return res.json({}); try { res.json(JSON.parse(data)); } catch (e) { res.status(500).send('Fichier items_data.json corrompu.'); } }); });
 app.post('/api/items-data', (req, res) => { const { item, text } = req.body; if (!item) return res.status(400).send('Nom de l\'item manquant.'); fs.readFile(itemsDataPath, 'utf8', (err, data) => { let itemsData = {}; if (!err && data.trim() !== '') { try { itemsData = JSON.parse(data); } catch (e) {} } itemsData[item] = text; fs.writeFile(itemsDataPath, JSON.stringify(itemsData, null, 2), 'utf8', (err) => { if (err) return res.status(500).send('Erreur sauvegarde données item.'); res.status(200).send('Données de l\'item sauvegardées.'); }); }); });

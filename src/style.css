@@ -1,38 +1,95 @@
-/* ... (tout le début reste pareil : :root, body, etc.) ... */
+/* --- VARIABLES & STYLES GLOBAUX --- */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #ecf0f1;
+    --background-color: #1a1a1a;
+    --card-background: #2c3e50;
+    --input-background: #3e5062;
+    --border-color: #4a6572;
+    --text-color: #ecf0f1;
+    --text-color-muted: #95a5a6;
+    --light-text-color: #ffffff;
+    --success-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --font-family: 'Poppins', sans-serif;
+}
 
-/* --- NOUVELLES RÈGLES SPÉCIFIQUES --- */
-.view-container {
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* --- STRUCTURE PRINCIPALE AVEC NAVIGATION --- */
+
+.app-layout {
     width: 100%;
-    max-width: 800px;
-    background: var(--card-background);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    animation: fadeIn 0.5s ease-out;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.view-container h1, .view-container h2 {
+.main-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main-header h1 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+}
+
+.main-nav button {
+    background-color: transparent;
+    border: 2px solid transparent;
+    color: var(--text-color-muted);
+    padding: 8px 16px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.main-nav button.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.main-content {
+    margin-top: 30px;
+}
+
+/* --- STYLE COMMUN AUX VUES (Atelier, Générateur, etc.) --- */
+.view-container {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.view-container h2 {
     text-align: center;
     margin-top: 0;
+    margin-bottom: 30px;
     color: var(--secondary-color);
 }
 
-.home-actions {
-    margin-top: 40px;
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.back-btn {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
+/* --- FORMULAIRES & BOUTONS --- */
 .form-group {
     display: flex;
     gap: 10px;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 .form-group label {
     flex-shrink: 0;
@@ -40,4 +97,71 @@
 .form-group input[type="number"] {
     width: 80px;
 }
-/* ... (le reste des styles pour input, textarea, button, etc., reste identique) ... */
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    background-color: var(--input-background);
+    color: var(--text-color);
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+textarea {
+    min-height: 250px;
+    margin-bottom: 15px;
+    resize: vertical;
+}
+
+textarea::placeholder { 
+    color: var(--text-color-muted);
+}
+
+button {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    border: none;
+    transition: transform 0.2s, background-color 0.2s;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--light-text-color);
+}
+button:hover {
+    transform: translateY(-2px);
+    background-color: #4ea8e1;
+}
+button:disabled {
+    background-color: #7f8c8d;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* --- COMPOSANTS SPÉCIFIQUES --- */
+
+/* Select multi-choix de la page Quiz */
+.css-b62m3t-container { /* Cible le conteneur de react-select */
+    width: 100%;
+}
+
+/* --- VUE QUIZ --- */
+#quiz-view, #quiz-results-view {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    background: var(--card-background);
+    padding: 30px;
+    border-radius: 12px;
+}
+.quiz-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+#quiz-progress-bar { width: 100%; background-color: var(--border-color); border-radius: 5px; margin-bottom: 20px; }
+#quiz-progress-value { height: 10px; background-color: var(--success-color); border-radius: 5px; }
+#quiz-options-container button { display: block; width: 100%; margin-bottom: 10px; text-align: left; }
+#quiz-options-container button.correct { background-color: var(--success-color); }
+#quiz-options-container button.incorrect { background-color: var(--danger-color); }
+#loading-spinner { border: 4px solid var(--border-color); border-top: 4px solid var(--primary-color); border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 50px auto; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }

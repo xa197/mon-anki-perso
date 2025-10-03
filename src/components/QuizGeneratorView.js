@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
-import Select from 'react-select'; // On importe la librairie
+import Select from 'react-select';
 
-function QuizGeneratorView({ navigateTo, allCards, onLaunchQuiz }) {
+function QuizGeneratorView({ allCards, onLaunchQuiz }) {
   const [selectedItems, setSelectedItems] = useState([]);
   const [numQCM, setNumQCM] = useState(5);
 
   const itemOptions = Array.from(new Set(allCards.map(c => c.deck).filter(Boolean)))
     .sort((a, b) => parseInt(a.split(':')[0], 10) - parseInt(b.split(':')[0], 10))
-    .map(item => ({ value: item, label: item })); // Format requis par react-select
+    .map(item => ({ value: item, label: item }));
 
-  // Styles personnalisés pour que react-select s'intègre à notre thème sombre
   const customStyles = {
     control: (provided) => ({ ...provided, backgroundColor: '#3e5062', borderColor: '#4a6572' }),
     menu: (provided) => ({ ...provided, backgroundColor: '#3e5062' }),
@@ -20,7 +19,6 @@ function QuizGeneratorView({ navigateTo, allCards, onLaunchQuiz }) {
 
   return (
     <div className="view-container">
-      <button className="back-btn" onClick={() => navigateTo('accueil')}>← Accueil</button>
       <h2>Générateur de Quiz</h2>
       
       <label>Choisissez les items à inclure :</label>

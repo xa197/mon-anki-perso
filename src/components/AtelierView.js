@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function AtelierView({ navigateTo, allCards, itemsData, onSave, onAddItem }) {
+function AtelierView({ allCards, itemsData, onSave, onAddItem }) {
   const [selectedItem, setSelectedItem] = useState('');
   const [text, setText] = useState('');
   const [newItemName, setNewItemName] = useState('');
@@ -12,9 +12,12 @@ function AtelierView({ navigateTo, allCards, itemsData, onSave, onAddItem }) {
     setText(itemsData[selectedItem] || '');
   }, [selectedItem, itemsData]);
 
+  const handleAddItem = () => {
+    onAddItem(newItemName, () => setNewItemName(''));
+  };
+
   return (
     <div className="view-container">
-      <button className="back-btn" onClick={() => navigateTo('accueil')}>← Accueil</button>
       <h2>Atelier de Contenu</h2>
       
       <div className="form-group">
@@ -24,7 +27,7 @@ function AtelierView({ navigateTo, allCards, itemsData, onSave, onAddItem }) {
           onChange={e => setNewItemName(e.target.value)} 
           placeholder="Nom du nouvel item (ex: 12: Nouveau cours)"
         />
-        <button onClick={() => onAddItem(newItemName, () => setNewItemName(''))}>Ajouter Item</button>
+        <button onClick={handleAddItem}>Ajouter Item</button>
       </div>
       
       <div className="form-group">

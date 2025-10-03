@@ -3597,5 +3597,40 @@
     "interval": 1,
     "easeFactor": 2.5,
     "nextReview": "2025-09-07T14:07:13.925Z"
+  },
+  {
+    "id": 1757535390155,
+    "deck": "correction CC conf été 2025",
+    "recto": "Carte initiale",
+    "verso": "Carte initiale",
+    "nextReview": "2025-09-10T20:16:30.155Z"
+  },
+  {
+    "id": 1758214053261,
+    "deck": "0 : Ancrages",
+    "recto": "Carte initiale",
+    "verso": "Carte initiale",
+    "nextReview": "2025-09-18T16:47:33.261Z"
+  },
+  {
+    "id": 1758258618632,
+    "deck": "LCA",
+    "recto": "Carte initiale",
+    "verso": "Carte initiale",
+    "nextReview": "2025-09-19T05:10:18.632Z"
+  },
+  {
+    "id": 1758639334694,
+    "deck": "Gyneco/obs",
+    "recto": "Carte initiale",
+    "verso": "Carte initiale",
+    "nextReview": "2025-09-23T14:55:34.694Z"
+  },
+  {
+    "id": 1758729994970,
+    "deck": "Pédiatrie",
+    "recto": "Carte initiale",
+    "verso": "Carte initiale",
+    "nextReview": "2025-09-24T16:06:34.970Z"
   }
 ]
