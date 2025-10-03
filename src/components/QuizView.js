@@ -1,24 +1,14 @@
-// Contenu complet pour QuizView.js - Copiez et remplacez tout votre fichier
+// Contenu complet pour QuizView.js - Version Originale
 
 import React, { useState } from 'react';
 
-// Fonction utilitaire pour comparer deux tableaux de réponses sans tenir compte de l'ordre
-const areArraysEqual = (arr1, arr2) => {
-  if (arr1.length !== arr2.length) return false;
-  const sortedArr1 = [...arr1].sort();
-  const sortedArr2 = [...arr2].sort();
-  return sortedArr1.every((value, index) => value === sortedArr2[index]);
-};
-
+// Reçoit les questions et une fonction `onQuizEnd` pour signaler la fin
 function QuizView({ questions, onQuizEnd }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  // On utilise un tableau pour stocker les réponses sélectionnées (au lieu d'une seule chaîne)
-  const [selectedAnswers, setSelectedAnswers] = useState([]);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [feedback, setFeedback] = useState('');
   const [score, setScore] = useState(0);
   const [quizFinished, setQuizFinished] = useState(false);
-  // Nouvel état pour savoir si l'utilisateur a validé sa réponse pour la question actuelle
-  const [isAnswerSubmitted, setIsAnswerSubmitted] = useState(false);
 
   if (!questions || questions.length === 0) {
     return (
@@ -30,41 +20,23 @@ function QuizView({ questions, onQuizEnd }) {
     );
   }
 
-  // On renomme la clé "answer" en "answers" pour correspondre au nouveau format
   const currentQuestion = questions[currentQuestionIndex];
-  // Mesure de sécurité si l'API renvoie accidentellement "answer" au lieu de "answers"
-  const correctAnswers = currentQuestion.answers || [currentQuestion.answer];
 
-  // Gère la sélection/désélection des cases à cocher
-  const handleOptionChange = (option) => {
-    setSelectedAnswers(prevAnswers => {
-      if (prevAnswers.includes(option)) {
-        return prevAnswers.filter(item => item !== option); // Désélectionner
-      } else {
-        return [...prevAnswers, option]; // Sélectionner
-      }
-    });
-  };
-
-  // Logique de validation lors du clic sur "Valider"
-  const handleSubmitAnswer = () => {
-    setIsAnswerSubmitted(true);
-    const isCorrect = areArraysEqual(selectedAnswers, correctAnswers);
-
-    if (isCorrect) {
+  const handleAnswerClick = (answer) => {
+    if (selectedAnswer) return;
+    setSelectedAnswer(answer);
+    if (answer === currentQuestion.answer) {
       setFeedback('Bonne réponse !');
       setScore(s => s + 1);
     } else {
-      setFeedback(`Mauvaise réponse. La ou les bonne(s) réponse(s) était(ent) : ${correctAnswers.join(', ')}`);
+      setFeedback(`Mauvaise réponse. La bonne réponse était : ${currentQuestion.answer}`);
     }
   };
 
-  // Passe à la question suivante
   const handleNextQuestion = () => {
     if (currentQuestionIndex < questions.length - 1) {
-      setSelectedAnswers([]);
+      setSelectedAnswer(null);
       setFeedback('');
-      setIsAnswerSubmitted(false);
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
       setQuizFinished(true);
@@ -92,42 +64,122 @@ function QuizView({ questions, onQuizEnd }) {
       </div>
       <div id="quiz-container">
         <p id="quiz-question-text">{currentQuestion.question}</p>
-        
-        {/* On utilise des cases à cocher (checkbox) au lieu de boutons */}
-        <div id="quiz-options-container" className="checkbox-container">
+        <div id="quiz-options-container">
           {currentQuestion.options.map((option, index) => {
-            let labelClass = '';
-            // Logique pour le feedback visuel après validation
-            if (isAnswerSubmitted) {
-              if (correctAnswers.includes(option)) {
-                labelClass = 'correct'; // C'est une bonne réponse
-              } else if (selectedAnswers.includes(option)) {
-                labelClass = 'incorrect'; // C'est une mauvaise réponse que l'utilisateur a cochée
-              }
+            let buttonClass = '';
+            if (selectedAnswer) {
+              if (option === currentQuestion.answer) { buttonClass = 'correct'; } 
+              else if (option === selectedAnswer) { buttonClass = 'incorrect'; }
             }
-            return (
-              <label key={index} className={`checkbox-label ${labelClass}`}>
-                <input
-                  type="checkbox"
-                  checked={selectedAnswers.includes(option)}
-                  onChange={() => handleOptionChange(option)}
-                  disabled={isAnswerSubmitted}
-                />
-                {option}
-              </label>
-            );
+            return (<button key={index} onClick={() => handleAnswerClick(option)} className={buttonClass} disabled={!!selectedAnswer}>{option}</button>);
           })}
         </div>
-        
         <div id="quiz-feedback">{feedback}</div>
-        
-        {/* On affiche "Valider" avant la validation, et "Question suivante" après */}
-        {!isAnswerSubmitted && <button id="submit-answer-btn" onClick={handleSubmitAnswer} disabled={selectedAnswers.length === 0}>Valider</button>}
-        {isAnswerSubmitted && <button id="next-question-btn" onClick={handleNextQuestion}>Question suivante →</button>}
-
+        {selectedAnswer && <button id="next-question-btn" onClick={handleNextQuestion}>Question suivante →</button>}
       </div>
     </div>
   );
 }
 
-export default QuizView;
+export default QuizView;```
+
+---
+
+### Étape 2 : Restaurer `server.js`
+
+Remplacez tout le contenu de votre fichier `server.js` par ce code original.
+
+```javascript
+// Contenu complet pour server.js - Version Originale
+
+require('dotenv').config();
+const express = require('express');
+const fs = require('fs');
+const path = require('path');
+const OpenAI = require('openai');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Initialisation du client OpenAI
+if (!process.env.OPENAI_API_KEY) { console.error("ERREUR: OPENAI_API_KEY non définie."); process.exit(1); }
+const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+});
+
+app.use(express.json());
+const cardsFilePath = path.join(__dirname, 'cartes.json');
+const itemsDataPath = path.join(__dirname, 'items_data.json');
+
+// --- ROUTES API ---
+
+app.post('/api/generate-questions', async (req, res) => {
+    const { texts, numQCM } = req.body;
+    if (!texts || !Array.isArray(texts) || texts.length === 0) {
+        return res.status(400).json({ error: "Aucun texte fourni." });
+    }
+    const qcmCount = parseInt(numQCM, 10) || 5;
+    const combinedText = texts.join('\n\n---\n\n');
+
+    try {
+        const systemPrompt = `Tu es un assistant expert en création de matériel pédagogique pour des étudiants en médecine.
+        Réponds UNIQUEMENT avec un objet JSON valide. Ne rien inclure avant ou après le JSON. N'utilise pas de blocs de code Markdown (\`\`\`json).
+        La structure du JSON doit contenir une clé "questions" qui est un tableau d'objets. Chaque objet question doit avoir : une clé "type" ('QCM'), une clé "question", une clé "options" (un tableau de 4 chaînes de caractères), et une clé "answer" (la réponse correcte, qui doit être l'une des 4 options).`;
+
+        const userPrompt = `Génère ${qcmCount} QCM à partir du texte suivant :
+        --- DEBUT DU TEXTE ---
+        ${combinedText}
+        --- FIN DU TEXTE ---`;
+
+        console.log("Appel à l'API OpenAI...");
+        
+        const response = await openai.chat.completions.create({
+            model: "gpt-3.5-turbo",
+            messages: [
+                { role: "system", content: systemPrompt },
+                { role: "user", content: userPrompt }
+            ],
+            response_format: { type: "json_object" } 
+        });
+
+        const jsonString = response.choices[0].message.content;
+        const data = JSON.parse(jsonString);
+        
+        console.log("Réponse d'OpenAI reçue et parsée avec succès !");
+        res.status(200).json(data);
+
+    } catch (error) {
+        console.error("Erreur génération quiz OpenAI:", error.message);
+        res.status(500).json({ error: "Erreur IA." });
+    }
+});
+
+// Le reste de vos routes
+app.post('/api/add-item', (req, res) => {
+    const { newItemName } = req.body;
+    if (!newItemName || newItemName.trim() === '') { return res.status(400).send('Le nom de l\'item ne peut pas être vide.'); }
+    fs.readFile(cardsFilePath, 'utf8', (err, data) => {
+        let cards = [];
+        if (!err && data) { try { cards = JSON.parse(data); } catch (e) {} }
+        const itemExists = cards.some(card => card.deck === newItemName);
+        if (itemExists) { return res.status(409).send('Cet item existe déjà.'); }
+        const placeholderCard = { id: Date.now(), deck: newItemName, recto: "Carte initiale", verso: "Carte initiale", nextReview: new Date().toISOString() };
+        cards.push(placeholderCard);
+        fs.writeFile(cardsFilePath, JSON.stringify(cards, null, 2), 'utf8', (err) => {
+            if (err) return res.status(500).send('Erreur sauvegarde.');
+            res.status(201).send('Item créé avec succès.');
+        });
+    });
+});
+
+app.get('/api/cards', (req, res) => { fs.readFile(cardsFilePath, 'utf8', (err, data) => { if (err) { if (err.code === 'ENOENT') return res.json([]); return res.status(500).send('Erreur lecture cartes.'); } try { res.json(JSON.parse(data)); } catch (e) { res.status(500).send('Fichier cartes.json corrompu.'); } }); });
+app.get('/api/items-data', (req, res) => { fs.readFile(itemsDataPath, 'utf8', (err, data) => { if (err) { if (err.code === 'ENOENT') return res.json({}); return res.status(500).send('Erreur lecture données items.'); } if (data.trim() === '') return res.json({}); try { res.json(JSON.parse(data)); } catch (e) { res.status(500).send('Fichier items_data.json corrompu.'); } }); });
+app.post('/api/items-data', (req, res) => { const { item, text } = req.body; if (!item) return res.status(400).send('Nom de l\'item manquant.'); fs.readFile(itemsDataPath, 'utf8', (err, data) => { let itemsData = {}; if (!err && data.trim() !== '') { try { itemsData = JSON.parse(data); } catch (e) {} } itemsData[item] = text; fs.writeFile(itemsDataPath, JSON.stringify(itemsData, null, 2), 'utf8', (err) => { if (err) return res.status(500).send('Erreur sauvegarde données item.'); res.status(200).send('Données de l\'item sauvegardées.'); }); }); });
+
+// --- FICHIERS STATIQUES & ROUTE CATCH-ALL ---
+app.use(express.static(path.join(__dirname, 'build')));
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+app.listen(PORT, () => console.log(`Serveur démarré sur http://localhost:${PORT}`));

@@ -1,4 +1,4 @@
-/* Contenu complet pour style.css - Copiez et remplacez tout votre fichier */
+// Contenu complet pour style.css - Version Originale
 
 /* style.css */
 body, html {
@@ -207,7 +207,7 @@ button:disabled {
 }
 
 
-/* Styles for correct/incorrect buttons (ancienne version) */
+/* Styles for correct/incorrect buttons */
 #quiz-options-container button.correct {
     background-color: #28a745; /* Green */
 }
@@ -239,53 +239,3 @@ button:disabled {
 #quiz-results-view {
     text-align: center;
 }
-
-
-/* ----- DEBUT DES NOUVEAUX STYLES POUR LES QCM A REPONSES MULTIPLES ----- */
-
-/* On annule la grille pour le nouveau conteneur */
-#quiz-options-container.checkbox-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-align: left; /* Aligne le texte des options à gauche */
-    max-width: 800px;
-    margin: 0 auto 20px auto; /* Centre le bloc d'options */
-}
-
-/* Style de base pour chaque ligne d'option (la case à cocher + le texte) */
-.checkbox-label {
-  display: flex;
-  align-items: center;
-  padding: 12px 15px;
-  border: 1px solid #444;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s, border-color 0.2s;
-}
-
-.checkbox-label:hover {
-  background-color: #333;
-}
-
-/* Style de la case à cocher elle-même */
-.checkbox-label input[type="checkbox"] {
-  margin-right: 12px;
-  width: 18px;
-  height: 18px;
-  accent-color: #007acc; /* Change la couleur de la coche */
-}
-
-/* Style pour une bonne réponse (appliqué après validation) */
-.checkbox-label.correct {
-  background-color: rgba(40, 167, 69, 0.2); /* Fond vert transparent */
-  border-color: #28a745;
-}
-
-/* Style pour une mauvaise réponse cochée par l'utilisateur (appliqué après validation) */
-.checkbox-label.incorrect {
-  background-color: rgba(220, 53, 69, 0.2); /* Fond rouge transparent */
-  border-color: #dc3545;
-}
-
-/* ----- FIN DES NOUVEAUX STYLES ----- */
