@@ -1,3 +1,5 @@
+// Contenu complet pour server.js - Version MISE À JOUR
+
 require('dotenv').config();
 const express = require('express');
 const fs = require('fs');
@@ -7,11 +9,8 @@ const OpenAI = require('openai');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Initialisation du client OpenAI
 if (!process.env.OPENAI_API_KEY) { console.error("ERREUR: OPENAI_API_KEY non définie."); process.exit(1); }
-const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
-});
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 app.use(express.json());
 const cardsFilePath = path.join(__dirname, 'cartes.json');
@@ -19,48 +18,33 @@ const itemsDataPath = path.join(__dirname, 'items_data.json');
 
 // --- ROUTES API ---
 
+// Route pour générer des questions (inchangée)
 app.post('/api/generate-questions', async (req, res) => {
+    // ... (votre code existant pour cette route reste ici, pas besoin de le changer)
     const { texts, numQCM } = req.body;
-    if (!texts || !Array.isArray(texts) || texts.length === 0) {
-        return res.status(400).json({ error: "Aucun texte fourni." });
-    }
+    if (!texts || !Array.isArray(texts) || texts.length === 0) { return res.status(400).json({ error: "Aucun texte fourni." }); }
     const qcmCount = parseInt(numQCM, 10) || 5;
     const combinedText = texts.join('\n\n---\n\n');
-
     try {
-        const systemPrompt = `Tu es un assistant expert en création de matériel pédagogique pour des étudiants en médecine.
-        Réponds UNIQUEMENT avec un objet JSON valide. Ne rien inclure avant ou après le JSON. N'utilise pas de blocs de code Markdown (\`\`\`json).
-        La structure du JSON doit contenir une clé "questions" qui est un tableau d'objets. Chaque objet question doit avoir : une clé "type" ('QCM'), une clé "question", une clé "options" (un tableau de 4 chaînes de caractères), et une clé "answer" (la réponse correcte, qui doit être l'une des 4 options).`;
-
-        const userPrompt = `Génère ${qcmCount} QCM à partir du texte suivant :
-        --- DEBUT DU TEXTE ---
-        ${combinedText}
-        --- FIN DU TEXTE ---`;
-
+        const systemPrompt = `Tu es un assistant expert en création de matériel pédagogique pour des étudiants en médecine. Réponds UNIQUEMENT avec un objet JSON valide. Ne rien inclure avant ou après le JSON. N'utilise pas de blocs de code Markdown (\`\`\`json). La structure du JSON doit contenir une clé "questions" qui est un tableau d'objets. Chaque objet question doit avoir : une clé "type" ('QCM'), une clé "question", une clé "options" (un tableau de 4 chaînes de caractères), et une clé "answer" (la réponse correcte, qui doit être l'une des 4 options).`;
+        const userPrompt = `Génère ${qcmCount} QCM à partir du texte suivant :\n--- DEBUT DU TEXTE ---\n${combinedText}\n--- FIN DU TEXTE ---`;
         console.log("Appel à l'API OpenAI...");
-        
         const response = await openai.chat.completions.create({
             model: "gpt-3.5-turbo",
-            messages: [
-                { role: "system", content: systemPrompt },
-                { role: "user", content: userPrompt }
-            ],
+            messages: [{ role: "system", content: systemPrompt }, { role: "user", content: userPrompt }],
             response_format: { type: "json_object" } 
         });
-
         const jsonString = response.choices[0].message.content;
         const data = JSON.parse(jsonString);
-        
         console.log("Réponse d'OpenAI reçue et parsée avec succès !");
         res.status(200).json(data);
-
     } catch (error) {
         console.error("Erreur génération quiz OpenAI:", error.message);
         res.status(500).json({ error: "Erreur IA." });
     }
 });
 
-// Le reste de vos routes
+// Route pour ajouter un item (inchangée)
 app.post('/api/add-item', (req, res) => {
     const { newItemName } = req.body;
     if (!newItemName || newItemName.trim() === '') { return res.status(400).send('Le nom de l\'item ne peut pas être vide.'); }
@@ -78,6 +62,40 @@ app.post('/api/add-item', (req, res) => {
     });
 });
 
+// --- NOUVELLE ROUTE POUR SUPPRIMER UN ITEM ---
+app.delete('/api/items/:itemName', (req, res) => {
+    const { itemName } = req.params;
+    if (!itemName) {
+        return res.status(400).send('Nom de l\'item manquant.');
+    }
+
+    // Étape 1: Supprimer les cartes associées dans cartes.json
+    fs.readFile(cardsFilePath, 'utf8', (err, data) => {
+        if (err) return res.status(500).send('Erreur lecture cartes.');
+        
+        let cards = JSON.parse(data);
+        const filteredCards = cards.filter(card => card.deck !== itemName);
+        
+        fs.writeFile(cardsFilePath, JSON.stringify(filteredCards, null, 2), 'utf8', (err) => {
+            if (err) return res.status(500).send('Erreur sauvegarde cartes.');
+            
+            // Étape 2: Supprimer les données associées dans items_data.json
+            fs.readFile(itemsDataPath, 'utf8', (err, data) => {
+                if (err) return res.status(500).send('Erreur lecture données items.');
+                let itemsData = JSON.parse(data);
+                delete itemsData[itemName]; // On supprime la clé de l'objet
+                
+                fs.writeFile(itemsDataPath, JSON.stringify(itemsData, null, 2), 'utf8', (err) => {
+                    if (err) return res.status(500).send('Erreur sauvegarde données item.');
+                    res.status(200).send('Item et données associées supprimés.');
+                });
+            });
+        });
+    });
+});
+
+
+// Routes pour récupérer les données (inchangées)
 app.get('/api/cards', (req, res) => { fs.readFile(cardsFilePath, 'utf8', (err, data) => { if (err) { if (err.code === 'ENOENT') return res.json([]); return res.status(500).send('Erreur lecture cartes.'); } try { res.json(JSON.parse(data)); } catch (e) { res.status(500).send('Fichier cartes.json corrompu.'); } }); });
 app.get('/api/items-data', (req, res) => { fs.readFile(itemsDataPath, 'utf8', (err, data) => { if (err) { if (err.code === 'ENOENT') return res.json({}); return res.status(500).send('Erreur lecture données items.'); } if (data.trim() === '') return res.json({}); try { res.json(JSON.parse(data)); } catch (e) { res.status(500).send('Fichier items_data.json corrompu.'); } }); });
 app.post('/api/items-data', (req, res) => { const { item, text } = req.body; if (!item) return res.status(400).send('Nom de l\'item manquant.'); fs.readFile(itemsDataPath, 'utf8', (err, data) => { let itemsData = {}; if (!err && data.trim() !== '') { try { itemsData = JSON.parse(data); } catch (e) {} } itemsData[item] = text; fs.writeFile(itemsDataPath, JSON.stringify(itemsData, null, 2), 'utf8', (err) => { if (err) return res.status(500).send('Erreur sauvegarde données item.'); res.status(200).send('Données de l\'item sauvegardées.'); }); }); });
