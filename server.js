@@ -1,5 +1,3 @@
-// Contenu complet pour server.js - Copiez et remplacez tout votre fichier
-
 require('dotenv').config();
 const express = require('express');
 const fs = require('fs');
@@ -30,16 +28,14 @@ app.post('/api/generate-questions', async (req, res) => {
     const combinedText = texts.join('\n\n---\n\n');
 
     try {
-        // ----- MODIFICATION DU PROMPT -----
         const systemPrompt = `Tu es un assistant expert en création de matériel pédagogique pour des étudiants en médecine.
         Réponds UNIQUEMENT avec un objet JSON valide. Ne rien inclure avant ou après le JSON. N'utilise pas de blocs de code Markdown (\`\`\`json).
-        La structure du JSON doit contenir une clé "questions" qui est un tableau d'objets. Chaque objet question doit avoir : une clé "type" ('QCM'), une clé "question", une clé "options" (un tableau de 4 ou 5 chaînes de caractères), et une clé "answers" (un TABLEAU contenant une ou plusieurs réponses correctes, qui doivent être issues des options).`;
+        La structure du JSON doit contenir une clé "questions" qui est un tableau d'objets. Chaque objet question doit avoir : une clé "type" ('QCM'), une clé "question", une clé "options" (un tableau de 4 chaînes de caractères), et une clé "answer" (la réponse correcte, qui doit être l'une des 4 options).`;
 
-        const userPrompt = `Génère ${qcmCount} QCM à partir du texte suivant. Assure-toi que certaines questions aient une seule bonne réponse et d'autres PLUSIEURS bonnes réponses :
+        const userPrompt = `Génère ${qcmCount} QCM à partir du texte suivant :
         --- DEBUT DU TEXTE ---
         ${combinedText}
         --- FIN DU TEXTE ---`;
-        // ----- FIN DE LA MODIFICATION -----
 
         console.log("Appel à l'API OpenAI...");
         

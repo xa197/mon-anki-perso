@@ -1,0 +1,29 @@
+.# Fichiers de dépendances (très important, ce dossier peut être énorme)
+node_modules/
+
+# Fichiers de build (le code compilé pour la production)
+build/
+
+# Fichiers sensibles contenant vos clés secrètes (le plus critique pour la sécurité)
+.env
+
+# Fichiers de log
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Fichiers système de macOS
+.DS_Store```
+
+### Explication rapide des lignes les plus importantes :
+
+*   `node_modules/` : Le dossier qui contient toutes les bibliothèques externes de votre projet. Il est inutile de le sauvegarder car il peut être recréé à tout moment avec la commande `npm install`. **C'est la règle n°1 du .gitignore pour un projet Node.js.**
+*   `build/` : Quand vous déploierez votre application, vous créerez un dossier "build" qui contient la version optimisée de votre site. On ne sauvegarde jamais ce dossier, car il est généré à partir de votre code source.
+*   `.env` : C'est la ligne la plus **critique pour la sécurité**. Elle dit à Git d'ignorer votre fichier contenant la clé API secrète, pour que vous ne la partagiez jamais par accident.
+
+**Action à faire maintenant :**
+
+1.  Ouvrez votre fichier `.gitignore`.
+2.  Copiez-collez le code ci-dessus à l'intérieur.
+3.  Enregistrez le fichier (avec **Cmd + S** sur votre Mac).
